@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <math.h>
+/*najava funkcije za racunanje udaljenosti*/
+float udaljenost(float,float,float,float) ; /*prototip funkcije*/
+
+/*pocetak glavnog programa*/
+void main()
+{
+	float x1,x2,y1,y2,d1;
+	printf("Upisite koordinate tocke T1 ");
+	scanf("%f,%f",&x1,&y1);
+	printf("\nUpisite koordinate tocke T2 ");
+	scanf("%f,%f",&x2,&y2);
+		
+	/*racunanje udaljenosti medju tockama T1 i T2 pozivom funkcije*/
+	d1=udaljenost(x1,y1,x2,y2);
+	printf("\nUdaljenost medju zadanim tockama je %.2f\n",d1);
+}
+
+/*kraj glavnog dijela programa*/
+
+/*tijelo funkcije za racunanje udaljenosti*/
+float udaljenost(float a,float b,float c,float d)
+{
+	float dulj;
+	dulj=sqrt(pow(c-a,2)+pow(d-b,2));
+	return dulj;
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+/*funkcija za racunanje udaljenosti*/
+float udaljenost(float a,float b,float c,float d)
+{
+	float dulj;
+	dulj=sqrt(pow(c-a,2)+pow(d-b,2));
+	return dulj;
+}
+
+/*pocetak glavnog programa*/
+void main()
+{
+	float x1,x2,y1,y2,d1;
+	printf("Upisite koordinate tocke T1 ");
+	scanf("%f,%f",&x1,&y1);
+	printf("\nUpisite koordinate tocke T2 ");
+	scanf("%f,%f",&x2,&y2);
+		
+	/*racunanje udaljenosti medju tockama T1 i T2 pozivom funkcije*/
+	d1=udaljenost(x1,y1,x2,y2);
+	printf("\nUdaljenost medju zadanim tockama je %.2f\n",d1);
+}

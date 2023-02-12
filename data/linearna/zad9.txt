@@ -1,0 +1,12 @@
+#include <stdio.h>
+void main()
+{
+	int xyz,x,y,z,s;
+	printf("Unesite troznamenkasti broj ");
+	scanf("%d",&xyz);
+	x=xyz/100;
+	y=xyz%100/10;
+	z=xyz%10;
+	s=x+y+z;
+	printf("\nZnamenke su %d, %d, %d, a njihova suma %d", x,y,z,s);
+}

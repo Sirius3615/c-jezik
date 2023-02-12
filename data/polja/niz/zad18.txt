@@ -1,0 +1,48 @@
+#include <stdio.h>
+int n;
+void upisi(float x[40])
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d: ",i+1);
+		scanf("%f",&x[i]);
+	}
+}
+
+void sortiraj (float x[40])
+{
+	int pom,i,j;
+	for (i=0;i<n-1;i++)
+			for (j=i+1;j<n;j++)
+				if (x[j]>x[i])
+				{
+						pom=x[i];
+						x[i]=x[j];
+						x[j]=pom;
+				}
+}
+
+void ispisi (float x[40])
+{
+	int i;
+	for (i=0;i<n;i++)
+		printf("\n%f ",x[i]);
+}
+
+void main()
+{
+	float a[10];
+	printf("\n upisite broj ucenika u razredu: ");
+	scanf("%d",&n);
+	if (n<=40)
+	{
+		printf("Upisite rezultat za svakog ucenika:");
+		upisi (a);
+		sortiraj(a);
+		printf("rezultati složeni od najboljeg do najlosijeg:\n");
+		ispisi(a);
+	}
+	else
+		printf("upisali ste previse elemenata");
+}

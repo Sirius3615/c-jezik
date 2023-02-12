@@ -1,0 +1,17 @@
+#include<stdio.h> #include<math.h>
+void main()
+{
+	int n=0;
+	double broj,naz=1;
+	float x,s=0;
+	printf("Upisite broj x: ");
+	scanf("%f",&x);
+	while (fabs(s-log(x))>=pow(10,-4)) 
+	{
+		n++;
+		broj=pow((x-1),n);
+		naz=n*pow(x,n);
+		s+=broj/naz;
+	}
+	printf("\nRezultat je dobiven u %d koraka, a iznosi %.5f.",n,s);
+}

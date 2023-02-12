@@ -1,0 +1,9 @@
+#include <stdio.h>
+void main()
+{
+	int a,b;
+	printf("\n Upisite jedan broj: ");
+	scanf("%d",&a);
+	b = (a>0)? 1: (a<0)? -1 : 0;
+	printf("\n predznak broja %d je %d",a,b);
+}

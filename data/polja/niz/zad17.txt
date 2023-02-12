@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+/*funkcija za popunjavanje niza slucajnim brojevimaiz intervala -500 do 400*/
+void upisi(int x[100])
+{
+	int i;
+	randomize();
+	for(i=0;i<100;i++)
+		x[i]=random(1000)-500;
+}
+
+void sortiraj (int x[100])
+{
+	int pom,i,j;
+	for (i=0;i<99;i++)
+			for (j=i+1;j<100;j++)
+				if (x[j]<x[i])
+				{
+						pom=x[i];
+						x[i]=x[j];
+						x[j]=pom;
+				}
+}
+
+void ispisi (int x[100])
+{
+	int i;
+	for(i=0;i<100;i++)
+		printf("%d\t",x[i]);
+}
+
+void main()
+{
+	int a[100];
+	upisi(a);
+	printf("\nNesortirano polje je \n");
+	ispisi(a);
+	sortiraj(a);
+	printf("\nSortirano polje je \n");
+	ispisi(a);
+}

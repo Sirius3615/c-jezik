@@ -1,0 +1,21 @@
+#include <stdio.h>
+void upisi(int x[5])
+{
+	int i;
+	for(i=0;i<5;i++)
+	{
+		printf("%d",i+1);
+		scanf("%d",&x[i]);
+}
+void ispisi (int x[5])
+{
+int i;
+	for(i=0;i<5;i++)
+		printf("%d",x[i]);
+}
+void main(void)
+{
+	int x[5];
+	upisi(x);
+	ispisi(x);
+}

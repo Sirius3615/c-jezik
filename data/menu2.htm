@@ -1,0 +1,46 @@
+<head>
+<script language="JavaScript"><!--
+function LM_sel(str) {
+var link1,link2;
+link2="s" + str + ".htm";
+parent.glavna.location.href=link2;
+}
+function Z_sel(br) {
+var link1,link2;
+link2="z" + br + ".htm";
+parent.glavna.location.href=link2;
+}
+function display(obj1ID, obj2ID, obj3ID) {
+var obj1 = document.getElementById(obj1ID);
+var obj2 = document.getElementById(obj2ID);
+var obj3 = document.getElementById(obj3ID);
+if (obj3.style.display == 'none') {
+	obj2.style.display = 'inline';
+	obj3.style.display = 'inline';
+	obj1.style.display = 'none';
+	} else {
+	obj1.style.display = 'inline';
+	obj2.style.display = 'none';
+	obj3.style.display = 'none';
+	}
+}
+//--></script>
+</head>
+<body bgcolor="#ECF994">
+<table width="229" border="0">
+  <tr><td width="223"><img src="../img/xx1_b2_over.png"></td></tr>
+  <tr>
+    <td width="223" height="24" onMouseOver="display('if1', 'if2', 'if3')" onMouseOut="display('if1', 'if2', 'if3')"><a href="javascript:;" onClick="LM_sel('2_2')"><img id="if1" src="../img/l1_b3.png" alt="if" name="l1" width="74" height="24" border="0" onload=""><img style="display:none" id="if2" src="../img/l1_b3_over.png" width="74" height="24" border="0"></a><a href="javascript:;" onClick="Z_sel('2_2')"><img style="display:none" id="if3" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+  </tr>
+  <tr>
+    <td width="223" height="24" onMouseOver="display('uv1', 'uv2', 'uv3')" onMouseOut="display('uv1', 'uv2', 'uv3')"><a href="javascript:;" onClick="LM_sel('2_4')"><img id="uv1" src="../img/l1_b5.png" alt="uvjetni" name="l2" width="74" height="24" border="0" onload=""><img style="display:none" id="uv2" src="../img/l1_b5_over.png" width="74" height="24" border="0"></a><a href="javascript:;" onClick="Z_sel('2_4')"><img style="display:none" id="uv3" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+	</tr>
+	<tr>
+	<td width="223" height="24" onMouseOver="display('sw1', 'sw2', 'sw3')" onMouseOut="display('sw1', 'sw2', 'sw3')"><a href="javascript:;" onClick="LM_sel('2_3')"><img id="sw1" src="../img/l1_b6.png" alt="switch" name="l3" width="74" height="24" border="0" onload=""><img style="display:none" id="sw2" src="../img/l1_b6_over.png" width="74" height="24" border="0"></a><a href="javascript:;" onClick="Z_sel('2_3')"><img style="display:none" id="sw3" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+	</tr>
+	<tr>
+	<td width="223" height="24" onMouseOver="display('gt1', 'gt2', 'gt3')" onMouseOut="display('gt1', 'gt2', 'gt3')"><a href="javascript:;" onClick="LM_sel('2_1')"><img id="gt1" src="../img/l1_b4.png" alt="goto" name="l4" width="74" height="24" border="0" onload=""><img style="display:none" id="gt2" src="../img/l1_b4_over.png" width="74" height="24" border="0"></a><a href="javascript:;" onClick="Z_sel('2_1')"><img style="display:none" id="gt3" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+  </tr>
+</table>
+
+</body>

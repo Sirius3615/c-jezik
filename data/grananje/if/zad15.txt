@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int a,b,c;
+	float x,y;
+	printf("Upisite koeficijente kvadratne funkcije: ");
+	scanf("%d, %d, %d", &a, &b, &c);
+	if (a==0)
+		printf("Niste zadali kvadratnu funkciju!");
+	else
+	{
+		x=(float)-b/(2*a);
+		y=(float)(4*a*c-pow(b,2))/(4*a);
+		if (a>0)
+			printf ("Funkcija ima minimum u tocki (%.2f,%.2f). Vrijednost mu je %.2f", x,y,y);
+		else
+			printf ("Funkcija ima maksimum u tocki (%.2f,%.2f). Vrijednost mu je %.2f", x,y,y);
+	}
+}

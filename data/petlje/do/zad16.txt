@@ -1,0 +1,21 @@
+#include<stdio.h> #include<math.h>
+void main()
+{
+	int n=2;
+	double x,f=1,s=1,p=-1,clan;
+	printf("Upisite x: ");
+	scanf("%lf",&x);
+	do
+	{
+		f*=n;
+		if (!(n%2))
+		{
+			clan=pow(x,n)/f;
+			s+=p*clan;
+			p=-p;
+
+		}
+		n+=1;
+	 }while (fabs(clan)>=pow(10,-5));
+	 printf ("\ncos(%.2lf)=%.5lf, a rezultat je dobiven u %d koraka", x,s,n/2);
+}

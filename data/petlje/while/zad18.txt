@@ -1,0 +1,17 @@
+#include<stdio.h> #include<math.h>
+#define pi 3.14169
+void main()
+{
+	int n=0,p=1;
+	double naz;
+	float s=0,s1=0;
+	while (fabs(s1-pi)>=pow(10,-6))
+	{
+		n++;
+		naz=pow(n,2);
+		s+=p*1/naz;
+		s1=sqrt(12*s);
+		p=-p;
+	}
+	printf("\nRezultat je dobiven u %d koraka, a iznosi %.5f.",n,s1);
+}

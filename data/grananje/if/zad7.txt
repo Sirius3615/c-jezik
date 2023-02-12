@@ -1,0 +1,12 @@
+#include <stdio.h>
+int a;
+void main()
+{
+	printf("\n upisite jedan broj: ");
+	scanf("%d",&a);
+	if (a<0)
+		a++;
+	else
+		a--;
+	printf ("%d",a);
+}

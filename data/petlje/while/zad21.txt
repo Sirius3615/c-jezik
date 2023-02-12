@@ -1,0 +1,23 @@
+#include<stdio.h> #include<math.h>
+void main()
+{
+	int a,u,min=32767,b=10,prvi,drugi,broj,p,d;
+	printf("Upisite jedan cijeli broj: ");
+	scanf("%d",&a);
+	broj=a;
+	while (broj>=10)
+	{
+		prvi=a/b;
+		drugi=a%b;
+		u=prvi*drugi; 
+		if (u<min)
+		{
+			min=u;
+			p=prvi;
+			d=drugi;
+		}
+		b*=10;
+		broj/=10;
+	}
+	printf("\n%d, %d, %d", p,d,min);
+}

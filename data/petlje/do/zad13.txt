@@ -1,0 +1,23 @@
+#include<stdio.h> void main()
+{
+	int broj,p,znam,i,s=0;
+	printf("Program trazi unosenje brojeva sve dok se ne upise prost broj!\n");
+	do
+	{
+		p=0;i=2;
+		printf("Upisite jedan prirodan broj: ");
+		scanf("%d",&broj);
+		do
+		{
+			if (!(broj%i)) p=1;
+			i++;
+		} while (i<broj/2);
+	 }while(p==1);
+	 do
+	 {
+		znam=broj%10;
+		s+=znam;
+		broj=broj/10;
+	 } while (broj!=0);
+	 printf("Zbroj znamenki je %d",s);
+}

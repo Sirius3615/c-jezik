@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>for</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+</head>
+
+<body bgcolor="#ECF994">
+<div align="left"><img src="../img/l1_b9_over.png"></div>
+<p><font size="2" face="Arial, Helvetica, sans-serif">&gt; Naredbe ponavljanja 
+  koriste se kada se isti dijelovi programa trebaju više puta ponoviti.<br>
+  &gt; Petlja for je uvjetna petlja kod koje se uvjet ponavljanja provjerava na 
+  početku.<br>
+  &gt; Opći oblik petlje for je:</font><br>
+  <font size="2"> <strong><font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (inicijalizacija; 
+  uvjet; promjena_vrijednosti)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;blok naredbi;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></strong><br>
+  <font face="Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp;&nbsp;gdje:<br>
+  </font></font><font size="2"><font face="Arial, Helvetica, sans-serif"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 
+  <font face="Courier New, Courier, mono"><strong>inicijalizacija</strong></font> 
+  znači postavljanje kontrolne varijable (i/ili dodatnih varijabli) na početnu 
+  vrijednost, <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <font face="Courier New, Courier, mono"><strong>uvjet</strong></font> 
+  je uvjet koji kontrolna varijabla mora zadovoljiti da bi se izvršile naredbe 
+  u petlji (blok naredbi), a <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <font face="Courier New, Courier, mono"><strong>promjena_vrijednosti</strong></font> 
+  je dio u kojem se definira način promjene stanja kontrolne varijable. <br>
+  &gt; Tijek izvršavanja for petlje je slijedeći:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Ako je prisutna <font face="Courier New, Courier, mono">inicijalizacija</font>, 
+  kontrolna varijabla (i/ili dodatne varijable) se postavljaju na početnu vrijednost<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (ako je to izraz, izračuna se 
+  njegova vrijednost, a nakon toga se ta vrijednost pridruži kontrolnoj varijabli).<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Ako je prisutan <font face="Courier New, Courier, mono">uvjet</font> 
+  provjerava se njegova istinitost. Ako je uvjet istinit (različit od 0), izvodi 
+  se blok naredbi.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Ako je prisutna <font face="Courier New, Courier, mono">promjena_vrijednosti</font> 
+  promjeni se vrijednost kontrolne varijable. Program se vraća na početak petlje,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; te se ona ponavlja od točke 2.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Ako je vrijednost uvjeta neistina, blok naredbi se preskače i program se 
+  nastavlja prvom naredbom iza bloka.<br>
+  &gt; Dijagram tijeka for petlje je:</font></font></p> 
+<p><font size="2"><img src="../img/for1.gif" hspace="200"></font></p>
+<p><font size="2" face="Arial, Helvetica, sans-serif">&gt; Petlje for mogu se 
+  i ugnježđivati, što znači pisati jedna unutar druge:</font><br>
+<font size="2" face="Courier New, Courier, mono"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (inicijalizacija1; 
+  uvjet1; promjena_vrijednosti1)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(inicijalizacija2; uvjet2; promjena_vrijednosti2)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blok naredbi;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</strong></font><font size="2"><br>
+  <font face="Arial, Helvetica, sans-serif">&gt; Za prijevremeni prekid izvršavanja 
+  naredbi u petlji rabi se naredba <strong><font face="Courier New, Courier, mono">break;</font></strong>.<br>
+  &gt; Za preskakanje dijela naredbi u petlji koristi se naredba <strong><font face="Courier New, Courier, mono">continue;</font></strong>.</font></font></p>
+</body>
+</html>

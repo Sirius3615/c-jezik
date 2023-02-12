@@ -1,0 +1,11 @@
+#include<stdio.h>
+void main()
+{
+	int i,f=1,n;
+	printf("Unesite cijeli broj ");
+	scanf("%d",&n);
+	if (n>0 && n<10)
+		for(i=1;i<=n;i++)
+			f*=i;
+	printf("%d!=%d",n,f);
+}

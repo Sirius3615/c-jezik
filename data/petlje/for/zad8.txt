@@ -1,0 +1,10 @@
+#include<stdio.h>
+void main()
+{
+	int a,x,pot=1,i;
+	printf("Unesi bazu i eksponent ");
+	scanf("%d,%d",&a,&x);
+	for(i=1;i<=x;i++)
+		pot*=a;
+	printf("%d na %d je %d",a,x,pot);
+}

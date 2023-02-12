@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	FILE *f;
+	int i,a;
+	/*otvaranje datoteke*/
+	f=fopen("brojevi.dat","a");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	/*pisanje u datoteku*/
+	for(i=101;i<=150;i++)
+		fprintf(f,"%d\n",i);
+	fclose(f);
+}

@@ -1,0 +1,12 @@
+#include<stdio.h>
+main()
+{
+	float nova, cijena, stara;
+	int snizenje;
+	printf("Nova cijena artikla: ");
+	scanf("%f", &nova);
+	printf("Snizenje: ");
+	scanf("%d",&snizenje);
+	stara=(100*nova)/(100-snizenje);
+	printf("Stara cijena artikla: %.2f kn",stara);
+}

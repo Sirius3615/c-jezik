@@ -1,0 +1,120 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct podaci
+{
+	char ime[15];
+	char prezime[15];
+	char sifra[5];
+	char adresa[30];
+	char telefon[15];
+} clanovi;
+int n;
+FILE *f;
+void kreiraj()
+{
+	int i;
+	f=fopen("clanovi.dat","w+");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+  printf ("Koliko imate clanova: ");
+  scanf ("%d", &n);
+
+	/*pisanje u datoteku*/
+  for(i=1;i<=n;i++)
+	{
+		printf ("\nUpisite podatke za %d clana\n", i);
+		printf("Ime: ");
+		scanf("%s",clanovi.ime);
+		printf("Prezime: ");
+		scanf("%s",clanovi.prezime);
+		printf("Sifra: ");
+		scanf("%s",clanovi.sifra);
+		printf("Adresa: ");
+		scanf("%s",clanovi.adresa);
+		printf("Telefon: ");
+		scanf("%s",clanovi.telefon);
+		fwrite(&clanovi,sizeof(struct podaci),1,f);
+	 }
+		fclose(f);
+}
+
+void dodaj()
+{
+	int i,a;
+	/*otvaranje datoteke*/
+	f=fopen("clanovi.dat","a");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	printf("koliko jos clanova zelis dodati ");
+	scanf("%d",&a);
+	/*pisanje u datoteku*/
+	for(i=1;i<=a;i++)
+	{
+		printf ("\nUpisite podatke za %d clana\n", i+n);
+		printf("Ime: ");
+		scanf("%s",clanovi.ime);
+		printf("Prezime: ");
+		scanf("%s",clanovi.prezime);
+		printf("Sifra: ");
+		scanf("%s",clanovi.sifra);
+		printf("Adresa: ");
+		scanf("%s",clanovi.adresa);
+		printf("Telefon: ");
+		scanf("%s",clanovi.telefon);
+		fwrite(&clanovi,sizeof(struct podaci),1,f);
+	 }
+	fclose(f);
+}
+
+void citaj()
+{
+	int i=1;
+	f=fopen("clanovi.dat","r");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	while (!feof(f))
+	{
+	fread(&clanovi,sizeof(struct podaci),1,f);
+	printf("\n\nClan %d",i);
+	printf("\nIme: %s\nPrezime: %s\nAdresa: %s\nTelefon: %s",clanovi.ime,clanovi.prezime,clanovi.adresa,clanovi.telefon);
+	i++;
+	}
+	fclose(f);
+}
+void main()
+{
+	int iz,k;
+	do
+	{
+	printf("IZBOR");
+	printf("\n1. kreiranje nove datoteke\n2. Dodavanje u postojecu\n3. Citanje iz datoteke");
+	printf("\nUnesi broj ispred zeljene operacije ");
+	scanf("%d",&iz);
+	switch (iz)
+	{
+		case 1: kreiraj();
+					break;
+		case 2: dodaj();
+					break;
+		case 3: citaj();
+					break;
+		default:printf("Odabrali ste nepostojeci izbor"); break;
+	}
+	printf("\nZelite li jos? Za kraj stisnite 0 inace bilo koji broj ");
+	scanf("%d",&k);
+	}while(k!=0);
+}
+
+
+
+
+

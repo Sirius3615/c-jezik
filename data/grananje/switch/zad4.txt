@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+	int x; float fx;
+	printf("Upisite jedan broj:");scanf("%d",&x);
+	switch(x)
+	{
+		case 1:
+		case 3:
+		case 5: fx=pow(x,2);break;
+		case 2:
+		case 4:
+		case 6: fx=sqrt(x);break;
+		case 7:
+		case 8:
+		case 9: fx=2*x;break;
+		default: fx=0;break;
+	}
+	printf("Rezultat je %.2f",fx);
+}

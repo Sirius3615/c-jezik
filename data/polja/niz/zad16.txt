@@ -1,0 +1,48 @@
+#include <stdio.h>
+int n;
+void upisi(int x[10])
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d: ",i+1);
+		scanf("%d",&x[i]);
+	}
+}
+/*funkcija za sortiranje elemenata niza*/
+void sortiraj (int x[10])
+{
+	int pom,i,j;
+	for (i=0;i<n-1;i++)
+			for (j=i+1;j<n;j++)
+				if (x[j]<x[i])
+				{
+				/*zamjena vrijednosti*/
+						pom=x[i];
+						x[i]=x[j];
+						x[j]=pom;
+				}
+}
+
+void ispisi (int x[10])
+{
+	int i;
+	for (i=0;i<n;i++)
+		printf("%d ",x[i]);
+}
+
+void main()
+{
+	int a[10];
+	printf("\n upisite broj elemenata u polju: ");
+	scanf("%d",&n);
+	if (n<10)
+	{
+		upisi (a);
+		sortiraj(a);
+		printf("sortirani niz je:\n");
+		ispisi(a);
+	}
+	else 
+		printf("upisali ste previse elemenata");
+}		

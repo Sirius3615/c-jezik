@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+{
+	int broj,br=0,s=0;
+	float as;
+	printf("\nProgram ce unositi brojeve sve dok se ne unese broj 0!\n");
+	while (broj!=0)
+	{
+		printf("Upisite broj: ");
+		scanf("%d",&broj);
+		s+=broj;
+		br++;
+	}
+	br--;
+	as=(float)s/br;
+	printf("Aritmeticka sredina unesenih brojeva je %.3f",as);
+}

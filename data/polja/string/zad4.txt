@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+	char a[80];
+	int n,i;
+	printf("Upisite recenicu: ");
+	gets(a);
+	n=strlen(a)-1;
+	for(i=n;i>=0;i--) printf("%c",a[i]);
+}

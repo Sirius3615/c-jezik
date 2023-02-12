@@ -1,0 +1,12 @@
+#include <stdio.h>
+void main()
+{	
+	int a,z,u=1;
+	printf("\n Upisite jedan prirodan broj: ");
+	scanf("%d",&a);
+	poc:z=a%10;
+	u*=z;
+	a/=10;
+	if (a!=0) goto poc;
+	printf("\n %d",u);
+}

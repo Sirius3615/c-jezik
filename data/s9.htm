@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<title>linearna</title>
+</head>
+<body bgcolor="#ECF994">
+<div align="left"><font size="2" face="Arial, Helvetica, sans-serif"> &gt; Biblioteka 
+  funkcija u kojoj su sadržane naredbe za rad s grafikom je <strong><font face="Courier New, Courier, mono">graphics.h</font></strong>, 
+  no ona nije podržana u Windows, već samo u DOS okruženju.<br>
+  &gt; Grafički ekran u C-u ima razlučivost 640x480 točaka. Gornji lijevi kut 
+  ima koordinate (0,0), a donji desni (640, 480).<br>
+  <img src="../img/grafika1.gif" hspace="200" vspace="5"><br>
+  &gt; Za pronalazak grafičke kartice najbolje je koristiti funkciju <font face="Courier New, Courier, mono"><strong>DETECT</strong></font>, 
+  koja zahtjeva automatsko detektiranje. Vrijednost koju vraća funkcija <strong><font face="Courier New, Courier, mono">DETECT</font></strong> 
+  potrebno je pridružiti jednoj cjelobrojnoj varijabli.<br>
+  &gt; Grafički način rada uvodi se funkcijom <strong><font face="Courier New, Courier, mono">initgraph</font></strong>. 
+  Ona učitava grafičke drivere i pokreće grafički način rada. Njezin je opći oblik:<br>
+  <font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>initgraph(&amp;gd,&amp;gm,&quot;putanja 
+  do grafičkih drivera&quot;);</strong></font><br>
+  <br>
+  </font> </div>
+<table border="1">
+  <tr> 
+    <td rowspan="6"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>točka</strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif"><b>sintaksa</b></font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif"><b>pojašnjenje</b></font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">putpixel(x,y,boja);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">crta točku s koordinatama 
+      (x,y) zadane boje</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">moveto(x,y);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">pomiče pokazivač u 
+      točku s koordinatama (x,y)</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">moverel(dx,dy);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">pomiče pokazivač za 
+      dx u smjeru osi x i za dy u smjeru osi y</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">getx();</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">vraća poziciju koordinate 
+      x</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">gety();</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">vraća poziciju koordinate 
+      y</font></td>
+  </tr>
+  <tr> 
+    <td rowspan="3"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>linija 
+        </strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">line (x1,y1,x2,y2);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Povlači liniju od točke 
+      (x1,y1) do točke (x2,y2)</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">linerel(dx,dy);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Crta liniju od trenutnog 
+      položaja pokazivača do točke koja je za dx udaljena po x-osi, a za dy po 
+      y-osi</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">lineto (x,y);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Crta liniju od trenutnog 
+      položaja pokazivača do točke s koordinatama (x,y)</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>boja</strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">setcolor(x);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">određuje boju linija 
+      (0 -16)</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>stil</strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">setlinestyle(x,1,1);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">stil linije (0-puna 
+      crta, 1točkasta, 2iscrtkana, 3-deblja točkasta, 4-točkasta s većim razmakom, 
+      5-debela crta</font></td>
+  </tr>
+  <tr> 
+    <td rowspan="2"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>pravokutnik</strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">rectangle(x1,y1,x2,y2);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Pravokutnik kojemu 
+      su (x1,y1) koordinate gornjeg lijevog, a (x2,y2) donjeg desnog vrha</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">bar(x1,y1,x2,y2);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Pravokutnik ispunjen 
+      trenutnom bojom i trenutnim stilom</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>kvadar</strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">bar3d(x1,y1,x2,y2,dubina,oznaka);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Trodimenzionalni pravokutnik 
+      (kvadar). Dubinom određujemo trodimenzionalnost. Za najbolji dojam trodimenzionalnosti 
+      preporučuje se uzeti 25% širine pravokutnika (x2-x1)/4. Posljednja oznaka 
+      određuje da li je lik zatvoren (1) ili otvoren (0) </font></td>
+  </tr>
+  <tr> 
+    <td rowspan="3"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>kružnica</strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">circle(x,y,r);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">kružnica polumjera 
+      r sa središtem u točki (x,y)</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">arc(x,y,pocetak,kraj,r);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">dio kružnice sa središtem 
+      u točki (x,y) polumjera r od mjesta pocetak (u stupnjevima) do mjesta kraj</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">pieslice(x,y,pocetak,kraj,r);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">popunjen dio kruga 
+      od mjesta pocetak do mjesta kraj</font></td>
+  </tr>
+  <tr> 
+    <td rowspan="3"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><strong>elipsa</strong></font></div></td>
+    <td><font size="2" face="Courier New, Courier, mono">ellipse(x,y,pocetak,kraj,a,b);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">elipsa sa središtem 
+      u točki(x,y) od mjesta početak (u stupnjevima) do mjesta kraj, duljine velike 
+      osi a, a male osi b</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">fillellipse(x,y,a,b)</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">popunjena elipsa</font></td>
+  </tr>
+  <tr> 
+    <td><font size="2" face="Courier New, Courier, mono">sector(x,y,pocetak,kraj,a,b);</font></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">popunjen dio elipse</font></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+	int n=1,n1,znam,p=0,br=0;
+	printf("Brojevi se unose sve dok se ne unese 0!\n");
+	while (n!=0)
+	{
+     printf("upisite jedan cijeli broj:" );
+		scanf("%d",&n);
+		n1=n; 
+		while (n1>0)
+		{
+			znam=n1%10;
+			n1/=10;
+			if (!(znam%2)) p=1;
+		}
+		if (p) br++;
+	}
+	printf("Od unesenih brojeva, njih %d ima barem jednu parnu znamenku" ,br);
+}

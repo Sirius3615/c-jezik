@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+	int n,znam,p=0;
+	printf("upisite jedan cijeli broj:" );
+	scanf("%d",&n);
+	while (n>10)
+	{
+		znam=n%10;
+		n/=10;
+		if (!(znam%2)) p=1;
+	}
+	(p==0)? printf("Broj JE potpuno neparan"):printf("Broj NIJE potpuno neparan");
+}

@@ -1,0 +1,53 @@
+#include<stdio.h>
+int a[30],b[30],n,i,j,bod,s;
+void upisi()
+{
+	for(i=0;i<n;i++)
+	{
+		printf("Unesite bodove po zadatku za %d ucenika",i+1);
+		s=0;
+		for(j=1;j<=3;j++)
+		{
+			printf("%d. zadatak ",j);
+			scanf("%d",&bod);
+			s+=bod;
+		}
+		a[i]=s;
+	}
+}
+void rang()
+{
+	for(i=0;i<n;i++)
+		b[i]=i+1;
+}
+void sort()
+{
+	int t;
+	for(i=0;i<n-1;i++)
+		for(j=i+1;j<n;j++)
+			if (a[i]<a[j])
+			{
+				t=a[i];
+				a[i]=a[j];
+				a[j]=t;
+				t=b[i];
+				b[i]=b[j];
+				b[j]=t;
+			}
+}
+void ispis()
+{
+	printf("\nUcenik\tbroj bodova");
+	for(i=0;i<n;i++)
+		printf("\n%d\t%d",b[i],a[i]);
+}
+
+void main()
+{
+	printf("Koliko je ucenika bilo na natjecanju ");
+	scanf("%d",&n);
+	upisi();
+	rang();
+	sort();
+	ispis();
+}

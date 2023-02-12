@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>glavni menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<script language="JavaScript" type="text/JavaScript"><!--
+function SM_sel(str) {
+var link1,link2;
+link1="data/menu" + str + ".htm";
+link2="data/s" + str + ".htm";
+//alert (link1);
+parent.sub_menu.location.href=link1;
+parent.glavna.location.href=link2;
+}
+function display(obj1ID, obj2ID) {
+var obj1 = document.getElementById(obj1ID);
+var obj2 = document.getElementById(obj2ID);
+if (obj2.style.display == 'none') {
+	obj2.style.display = 'block';
+	obj1.style.display = 'none';
+//	} else {
+//	obj1.style.display = 'inline';
+//	obj2.style.display = 'none';
+	}
+}
+//--></script>
+
+</head>
+
+<body bgcolor="#ECF994"><table width="100%" border="0">
+  <tr>
+    <td width="20%"><div align="center"><img src="img/logo_sk.gif" width="120" height="62" align="top"></div></td>
+    <td width="60%"><div align="center"><img src="img/naslov.jpg"></div></td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+</table>
+
+<div align="center"> </div>
+<table width="950" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><a href="javascript:;" onMouseOver="display('m1', 'm11')" onMouseOut="display('m11', 'm1')" onClick="SM_sel('1')"><img src="img/xx1_b1.png" id="m1" alt="linearna struktura" border="0"><img style="display:none" src="img/xx1_b1_over.png" id="m11" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m2', 'm21')" onMouseOut="display('m21', 'm2')" onClick="SM_sel('2')"><img src="img/xx1_b2.png" id="m2" alt="grananje" name="m2" border="0"><img style="display:none" src="img/xx1_b2_over.png" id="m21" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m3', 'm31')" onMouseOut="display('m31', 'm3')" onClick="SM_sel('3')"><img src="img/xx1_b3.png" id="m3" alt="petlje" name="m3" border="0"><img style="display:none" src="img/xx1_b3_over.png" id="m31" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m4', 'm41')" onMouseOut="display('m41', 'm4')" onClick="SM_sel('4')"><img src="img/xx1_b4.png" id="m4" alt="funkcije" name="m4" border="0"><img style="display:none" src="img/xx1_b4_over.png" id="m41" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m5', 'm51')" onMouseOut="display('m51', 'm5')" onClick="SM_sel('5')"><img src="img/xx1_b5.png" id="m5" alt="polja" name="m5" border="0"><img style="display:none" src="img/xx1_b5_over.png" id="m51" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m6', 'm61')" onMouseOut="display('m61', 'm6')" onClick="SM_sel('6')"><img src="img/xx1_b6.png" id="m6" alt="strukture" name="m6" border="0"><img style="display:none" src="img/xx1_b6_over.png" id="m61" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m7', 'm71')" onMouseOut="display('m71', 'm7')" onClick="SM_sel('7')"><img src="img/xx1_b7.png" id="m7" alt="pokazivaci" name="m7" border="0"><img style="display:none" src="img/xx1_b7_over.png" id="m71" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m8', 'm81')" onMouseOut="display('m81', 'm8')" onClick="SM_sel('8')"><img src="img/xx1_b8.png" id="m8" alt="datoteke" name="m8" border="0"><img style="display:none" src="img/xx1_b8_over.png" id="m81" border="0"></a></td>
+<td><a href="javascript:;" onMouseOver="display('m9', 'm91')" onMouseOut="display('m91', 'm9')" onClick="SM_sel('9')"><img src="img/xx1_b9.png" id="m9" alt="grafika" name="m9" border="0"><img style="display:none" src="img/xx1_b9_over.png" id="m91" border="0"></a></td>
+</tr>
+</table>
+</body>
+</html>

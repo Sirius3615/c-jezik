@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<math.h>
+float a, rez;
+main()
+{
+	printf("Upisite jedan realan broj: ");
+	scanf("%f",&a);
+	rez=(a>0)? sqrt(a):a+10;
+	printf("rezultat=%.2f ",rez);
+}

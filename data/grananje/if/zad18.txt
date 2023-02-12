@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+	int broj, s,d,j, zbroj;
+	printf("Upisite jedan troznamenkasti broj: ");
+	scanf("%d", &broj);
+	if ((broj>99)&&(broj<1000))
+	{
+		s=broj/100;
+		d=broj/10%10;
+		j=broj%10;
+		zbroj=s+d+j;
+		if (zbroj%3)
+			printf ("\nZbroj znamenaka %d nije dijeljiv s 3", zbroj);
+		else
+			printf ("\nZbroj znamenaka %d je dijeljiv s 3", zbroj);
+	 }
+	 else
+		printf ("\nNiste upisali troznamenkasti broj");
+}

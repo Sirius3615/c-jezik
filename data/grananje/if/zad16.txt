@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <math.h>
+float a,b,c,d,x1,x2,e,f,g,h,i,y1,y2;
+void main()
+{
+	printf("Ucitajte koeficijente jednadzbe parabole: ");
+	scanf("%f,%f,%f",&e,&f,&g);
+	printf("Ucitajte koeficijente jednadzbe pravca: ");
+	scanf("%f, %f", &h, &i);
+	a=e;
+	b=f-h;
+	c=g-i;
+	if (a!=0)
+	{
+		d=b*b-4*a*c;
+		if (d>0)
+		{
+			d=sqrt(d);
+			x1=(-b+d)/(2*a);
+			x2=(-b-d)/(2*a);
+			y1=h*x1+i;
+			y2=h*x2+i;
+			printf("Sjecista pravca i parabole se nalaze u tockama (%.2f,%.2f) i (%.2f,%.2f)",x1,y1,x2,y2);
+		}
+		else if (d==0)
+				{
+						x1=(-b/(2*a));
+						y1=x1*h+i;
+						printf("Pravac i parabola se diraju u tocki (%.2f,%.2f)", x1,y1);
+				}
+	 			else
+	 			{
+						printf("Pravac i parabola se ne sijeku!");
+	 			}
+	}
+	else
+	{
+		printf("Niste zadali parabolu!");
+	}
+}

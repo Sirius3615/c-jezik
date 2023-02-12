@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	float a,b,c,d,re,im;
+	int izbor;
+	printf("Unesite prvi kompleksan broj ");
+	scanf("%f,%f",&a,&b);
+	printf("Unesite drugi kompleksan broj ");
+	scanf("%f,%f",&c,&d);
+	printf("IZBOR\n1. ZBROJ\n2. RAZLIKA\n3. PRODUKT\n4. KVOCIJENT");
+	printf("\nUnesi jedan broj ");
+	scanf("%d",&izbor);
+	switch (izbor)
+	{
+		case 1:	re=a+c;
+					im=b+d;
+					printf("Rezultat zbrajanja je %.2f+%.2fi",re,im);
+					break;
+		case 2:	re=a-c;
+					im=b-d;
+					printf("Rezultat oduzimanja je %.2f+%.2fi",re,im);
+					break;
+		case 3:	re=a*c-b*d;
+					im=b*c+a*d;
+					printf("Rezultat množenja je %.2f+%.2fi",re,im);
+					break;
+		case 4:	re=(a*c+b*d)/(pow(c,2)+pow(d,2));
+					im=(b*c-a*d)/(pow(c,2)+pow(d,2));
+					printf("Rezultat dijeljenja je %.2f+%.2fi",re,im);
+					break;
+		default:	printf("Unjeli ste krivi broj");
+	}
+}

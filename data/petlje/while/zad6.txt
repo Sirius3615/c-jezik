@@ -1,0 +1,14 @@
+#include <stdio.h>
+void main (void)
+{
+	int s=0, i=1, n, znam;
+	printf ("\n Upisite jedan prirodni broj: ");
+	scanf("%d",&n);
+	while (n!=0)
+	{
+	 znam=n%10;
+	 n/=10;
+	 s+=znam;
+	}
+	printf("Trazeni zbroj je %d",s);
+}

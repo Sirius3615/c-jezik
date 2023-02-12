@@ -1,0 +1,31 @@
+1. naèin
+
+#include <stdio.h>
+int a;
+void main()
+{
+	printf("upisite jedan broj: ");
+	scanf("%d",&a);
+	if (a>0) printf("ucitani broj je veci od nule");
+	if (a<0) printf("ucitani broj je manji od nule");
+	if (a==0)printf("ucitani broj je nula");
+}
+
+
+
+2. naèin
+
+
+#include <stdio.h>
+void main()
+{
+	int a;
+	printf(" \n Upisite jedan broj: ");
+	scanf("%d",&a);
+	if (a>0)
+		printf(" Broj %d je veci od nule.",a);
+	else if (a<0)
+		printf(" Broj %d je manji od nule.",a);
+	      else
+		printf(" Ucitali ste nulu!.",a);
+}

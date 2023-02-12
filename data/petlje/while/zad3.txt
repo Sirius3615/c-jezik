@@ -1,0 +1,18 @@
+#include <stdio.h>
+void main (void)
+{
+	int broj, broj1, faktor=2;
+	printf("\n Upisite jedan prirodni broj: ");
+	scanf("%d",&broj);
+	broj1=broj;
+	printf("%d=1",broj);
+	while (faktor<=broj)
+	{
+		if (broj1%faktor==0)
+		{
+			printf("*%d",faktor);
+			broj1/=faktor;
+		}
+		else faktor+=1;
+	 }
+}

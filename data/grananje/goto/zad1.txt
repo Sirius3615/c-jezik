@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+	float a,b,c,o,p,s;
+	upis: printf("\n Unesite duljine stranica trokuta a, b, c: ");
+	scanf("%f,%f,%f",&a,&b,&c);
+	if (a+b>c && a+c>b && b+c>a && a>0 && b>0 && c>0)
+	{
+		s=(a+b+c)/2;
+		o=a+b+c;
+		p=sqrt(s*(s-a)*(s-b)*(s-c));
+		printf(" opseg zadanog trokuta je %.2f, a povrsina %.2f",o,p);
+	}
+	else
+	{
+		printf(" \n Zadani brojevi ne cine stranice trokuta. \n Molimo, ponovite upis\n");
+		goto upis;
+	}
+}

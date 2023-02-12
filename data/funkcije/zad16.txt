@@ -1,0 +1,29 @@
+#include<stdio.h>
+void podijeli (int n, int m, int d)
+{
+	printf("%d",n/m);
+	if((d>0)&&(n%m!=0))
+	{
+		n=(n%m)*10;
+		d--;
+		podijeli(n,m,d);
+
+	}
+
+}
+
+void main()
+{
+	int a,b,br_dec;
+	printf("Unesi dva prirodna broja ");
+	scanf("%d,%d",&a,&b);
+	if(a<=0 || b<=0)
+		printf("Brojevi moraju biti prirodni");
+	else
+	{
+		printf("Unesi broj decimala ");
+		scanf("%d",&br_dec);
+		printf("%d/%d=%d.",a,b,a/b);
+		podijeli(a,b,br_dec);
+	}
+}

@@ -1,0 +1,57 @@
+#include<stdio.h>
+int a,b,nzm;
+/*funkcija za pronalazenje najvece zajednicke mjere*/
+int mjera(int x, int y)
+{
+	int o;
+	o=x%y;
+	while (o>0)
+	{
+		x=y;
+		y=o;
+		o=x%y;
+	}
+	return y;
+}
+
+
+ /*funkcija za skracivanje */
+void skrati()
+{
+		a=a/nzm;
+		b=b/nzm;
+}
+/*funkcija za ispis*/
+void ispis()
+{
+	if (a==0) printf("0");
+	else
+		if(b==1) printf("%d",a);
+		else
+			printf("%d/%d",a,b);
+}
+/*glavni progam*/
+void main()
+{
+	int v,m;
+	printf("Unesi brojnik i nazivnik razlomka ");
+	scanf("%d,%d",&a,&b);
+	if (b==0)
+		printf("Nazivnik ne moze biti nula ");
+	else
+	{
+		if (a>b)
+		{
+			v=a;
+			m=b;
+		}
+		else
+		{
+			v=b;
+			m=a;
+		}
+		nzm=mjera(v,m);
+		skrati();
+		ispis();
+	}
+}

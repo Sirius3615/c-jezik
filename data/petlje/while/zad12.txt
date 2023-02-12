@@ -1,0 +1,14 @@
+#include<stdio.h> void main()
+{
+	int broj,brp=0,brn=0,v=0,m=0;
+	printf("\nProgram ce unositi brojeve sve dok se ne unese broj 20!\n");
+	while (broj!=20)
+	{
+		printf("Upisite broj: ");
+		scanf("%d",&broj);
+		(broj%2)? brn++: brp++;
+		(broj<20)? m++: v++;
+	}
+	printf("Unjeli ste %d parnih i %d neparnih brojeva!",brp-1,brn);
+	printf("\n%d ih je manjih, a %d vecih od 20!",m,v-1);
+}

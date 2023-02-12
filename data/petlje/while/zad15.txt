@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+	int n,znam,min;
+	printf("upisite jedan cijeli broj:" );
+	scanf("%d",&n);
+	min=n%10;
+	while (n>10)
+	{
+		n/=10;
+		znam=n%10;
+		if (znam<min) min=znam;
+	}
+	printf("Najmanja znamenka je %d", min);
+}

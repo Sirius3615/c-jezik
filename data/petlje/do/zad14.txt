@@ -1,0 +1,23 @@
+#include<stdio.h> void main()
+{
+	int n,z,i=2,broj;
+	printf ("Upisi jedan prirodan broj: ");
+	scanf("%d", &n);
+	do
+	{
+		broj=i-1;
+		z=0;
+		do
+		{
+			if (!(i%broj))
+			{
+				z+=broj;
+				broj--;
+			}
+			else
+				broj--;
+		}while(broj!=0); 
+		if (z==i) printf ("\n%d",i);
+		i++;
+	}while (i<=n);
+}

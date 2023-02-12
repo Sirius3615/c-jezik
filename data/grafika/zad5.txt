@@ -1,0 +1,32 @@
+#include<graphics.h>
+#include<conio.h>
+int gd, gm,i;
+main()
+{
+	gd=DETECT;
+	initgraph(&gd, &gm,"");
+	for(i=1;i<200;i++)
+	{
+		setcolor(i);
+		rectangle(i+5,i+5,i+100,i+50);
+	}
+	getch();
+	for(i=1;i<250;i++)
+	{
+		setcolor(i);
+		circle(i+350,200-(0.7*i),50);
+	}
+	getch();
+	for(i=1;i<200;i++)
+	{
+		setcolor(i);
+		rectangle(300-i,i+200,205-i,i+250);
+	}
+	getch();
+	for(i=1;i<250;i++)
+	{
+		setcolor(i);
+		circle(i+350,240+(0.7*i),50);
+	}
+	getch();
+}

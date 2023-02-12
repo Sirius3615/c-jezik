@@ -1,0 +1,10 @@
+#include<stdio.h>
+void main()
+{
+	int n,m,i,u=0;
+	printf("Upisite dva cijela broja, odvojena zarezom: ");
+	scanf("%d, %d",&n, &m);
+	for (i=1;i<=n;i++)
+		u=u+m;
+	printf("%d * %d = %d",n,m,u);
+}

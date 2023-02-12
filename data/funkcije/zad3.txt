@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+float o;
+float udaljenost(float a,float b,float c,float d)
+{
+	float dulj;
+	dulj=sqrt(pow(c-a,2)+pow(d-b,2));
+	return dulj;
+}
+float opseg (float d1, float d2, float d3)
+{
+	o=d1+d2+d3;
+	return o;
+}
+float povrsina (float d1, float d2, float d3)
+{
+	float s,p;
+	s=o/2;
+	p=sqrt(s*(s-d1)*(s-d2)*(s-d3));
+	return p;
+}
+void main()
+{
+	float x1,x2,x3,y1,y2,y3,d1,d2,d3,p;
+	printf("Upisite koordinate tocke A ");
+	scanf("%f,%f",&x1,&y1);
+	printf("\nUpisite koordinate tocke B ");
+	scanf("%f,%f",&x2,&y2);
+	printf("\nUpisite koordinate tocke C ");
+	scanf("%f,%f",&x3,&y3);
+	
+	/*racunanje duljina stranica pozivom funkcije*/
+	d1=udaljenost(x1,y1,x2,y2);
+	d2=udaljenost(x2,y2,x3,y3);
+	d3=udaljenost(x1,y1,x3,y3);
+	o=opseg(d1,d2,d3);
+	p=povrsina(d1,d2,d3);
+	printf("\nDuljine stranica trokuta su %.2f, %.2f, %.2f",d1,d2,d3);
+	printf("\nOpseg je %.2f\nPovrsina je %.2f",o,p);
+}

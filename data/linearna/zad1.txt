@@ -1,0 +1,16 @@
+#include<stdio.h>
+float a,b,c,d,e,f,x,y,z;
+void main(void)
+{
+	printf("\n upisi koeficijente:");
+	printf("\n a:");scanf("%f",&a);
+	printf(" b:");scanf("%f",&b);
+	printf(" e:");scanf("%f",&e);
+	printf(" c:");scanf("%f",&c);
+	printf(" d:");scanf("%f",&d);
+	printf(" f:");scanf("%f",&f);
+	z=1/(a*d-b*c);
+	x=float((d*e-b*f))*z;
+	y=float((a*f-e*c))*z;
+	printf("\n rjesenja danog sistema su: x=%.2f, y=%.2f",x,y);
+}

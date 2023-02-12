@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+char a[80];
+int n,i,k=0,br=0,j;
+void main(void)
+{
+	printf("upisite jednu recenicu: ");
+	gets(a);
+	n=strlen(a)-1;
+	/*broji razmake*/
+	for(i=0;i<=n;i++)
+		if (a[i]==' ') br++;
+	/*izbacuje razmake*/
+	for(i=0;i<=br-1;i++)
+		for(j=0;j<=n;j++)
+		{
+			if(a[j]==' ')
+			{
+				a[j]=a[j+1];
+				a[j+1]=' ';
+			}
+		}
+	/*provjerava da li je ucitani string palindrom*/
+	n=n-br;
+	for(i=0;i<=n;i++)
+		if (a[i]!=a[n-i])
+			k=1;
+	if (k==0)
+		printf("ucitani string je palindrom");
+	else
+		printf ("ucitani string nije palindrom");
+}

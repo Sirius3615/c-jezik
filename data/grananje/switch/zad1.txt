@@ -1,0 +1,23 @@
+#include <stdio.h>
+void main()
+{
+	int x;
+	printf("upisite jedan broj:");scanf("%d",&x);
+	switch(x%7)
+	{
+		case 0:printf("\n ponedjeljak");
+					break;
+		case 1:	printf("\n utorak");
+					break;
+		case 2:	printf("\n srijeda");
+					break;
+		case 3:	printf("\n cetvrtak");
+					break;
+		case 4:	printf("\n petak");
+					break;
+		case 5:	printf("\n subota");
+					break;
+		default:printf("\n nedjelja");
+						break;
+	}
+}

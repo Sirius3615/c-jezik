@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+struct tocka
+{
+	float x;
+	float y;
+}T1,T2;
+
+float duljina(float a,float b, float c, float d)
+{
+	return sqrt(pow(a-c,2)+pow(b-d,2));
+}
+float povrsina(float m, float n)
+{
+	return m*n;
+}
+float opseg(float m, float n)
+{
+	return 2*m+2*n;
+}
+void main()
+{
+	float d,a,b,p,o;
+	printf("\nUpisite koordinate tocke T1 ");
+	scanf("%f,%f",&T1.x,&T1.y);
+	printf("\nUpisite koordinate tocke T2 ");
+	scanf("%f,%f",&T2.x,&T2.y);
+	a=duljina(T1.x,T1.y,T2.x,T1.y);
+	b=duljina(T2.x,T1.y,T2.x,T2.y);
+	p=povrsina(a,b);
+	o=opseg(a,b);
+	printf("\nPovrsina je %.2f, a opseg %.2f", p,o);
+}

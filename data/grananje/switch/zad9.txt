@@ -1,0 +1,24 @@
+#include<stdio.h>
+ main()
+ {
+	int d,m,g;
+	printf("\nUpisite datum u obliku dd mm gggg: ");
+	scanf("%d %d %d",&d, &m, &g);
+	switch (m)
+		{
+			case 1:printf ("%d. sijecnja %d.", d,g);	break;
+			case 2:printf ("%d. veljace %d.",d,g); break;
+			case 3:printf ("%d. ozujka %d.",d,g); break;
+			case 4:printf ("%d. travnja %d.",d,g);break;
+			case 5:printf ("%d. svibnja %d.",d,g);break;
+			case 6:printf ("%d. lipnja %d.",d,g);break;
+			case 7:printf ("%d. srpnja %d.",d,g);break;
+			case 8:printf ("%d. kolovoza %d.",d,g);break;
+			case 9:printf ("%d. rujna %d.",d,g);break;
+			case 10:printf ("%d. listopada %d.",d,g);break;
+			case 11:printf ("%d. studenoga %d.",d,g);break;
+			case 12:printf ("%d. prosinca %d.",d,g);break;
+			default: printf("upisali ste krivi broj za mjesec");
+			break;
+		}
+ }

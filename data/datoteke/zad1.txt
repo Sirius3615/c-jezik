@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	FILE *f;
+	int i,a;
+	/*otvaranje datoteke*/
+	f=fopen("brojevi.dat","w");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	/*pisanje u datoteku*/
+	for(i=1;i<=100;i++)
+		fprintf(f,"%d\n",i);
+	fclose(f);
+	/*ponovno otvaranje datoteke*/
+	f=fopen("brojevi.dat","r");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	/*citanje iz datoteke*/
+	while (!feof(f))
+	{
+		fscanf(f,"%d\n",&a);
+		printf("\n%d",a); /*ispis na zaslon*/
+	}
+	fclose(f);
+}

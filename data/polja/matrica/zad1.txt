@@ -1,0 +1,36 @@
+#include <stdio.h>
+/* funkcija za unosenje elemenata u dvodimenzionalni niz*/
+void upisi (int a[10][10],int n, int m)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+		for(j=0;j<m;j++)
+		{
+			printf("a[%d][%d]: ",i,j);
+			scanf("%d",&a[i][j]);
+		}
+}
+/*ispis u obliku tablice*/
+void ispisi (int a[10][10],int n, int m)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+			printf("%d\t",a[i][j]);
+		printf("\n"); /*zbog prelaska u novi red*/
+	}
+}
+
+void main()
+{
+	int a[10][10],n,m;
+	printf ("upisite broj redova matrice: ");
+	scanf("%d",&n);
+	printf("upisite broj stupaca matrice: ");
+	scanf("%d",&m);
+	printf("upisite elemente polja:\n");
+	upisi (a,n,m);
+	printf("upisali ste elemente: \n");
+	ispisi(a,n,m);
+}	

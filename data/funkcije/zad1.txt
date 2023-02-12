@@ -1,0 +1,19 @@
+#include <stdio.h>
+int a,b;     /*najava globalnih varijabli*/
+
+/*funkcija zamjene*/
+void zamjena () 
+{
+	int t;    /*lokalna varijabla*/
+	t=a;      /*zamjena koristenjem globalnih varijabli*/
+	a=b;
+	b=t;
+}
+void main()
+{
+	printf("Unesite dva cijela broja ");
+	scanf("%d,%d",&a,&b);
+	printf("\nUpisali ste a=%d i b=%d",a,b);
+	zamjena();    /*poziv funkcije sa globalnim varijablama*/
+	printf("\nNakon funkcije a=%d, b=%d",a,b);
+}

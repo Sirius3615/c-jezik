@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+	char a[80];
+	int n,i,k;
+	printf("Upisite jednu rijec: ");
+	gets(a);
+	n=strlen(a)-1;
+	for(i=0;i<=n;i++)if (a[i]!=a[n-i]) k=1;
+	if (k==0)		printf("ucitana rijec je palindrom");
+	else printf ("ucitana rijec nije palindrom");
+}

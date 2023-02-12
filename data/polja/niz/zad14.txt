@@ -1,0 +1,36 @@
+#include<stdio.h>
+int n, br;
+void upisi(int x[50])
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d: ",i+1);
+		scanf("%d",&x[i]);
+	}
+}
+void provjeri(int x[50])
+{
+	int i,a,znam;
+	for(i=0;i<n;i++)
+	{
+		a=x[i]; int zbroj=0;
+		while (a>0)
+		{
+			znam=a%10;
+			zbroj+=znam;
+			a/=10;
+			if(!(zbroj%5)) br++;
+		}
+	}
+}
+main()
+{
+	int a[50];
+	printf("upisite broj elemenata: ");
+	scanf("%d", &n);
+	printf("Upisite elemente niza:\n");
+	upisi (a);
+	provjeri(a);
+	printf("\nTrazenih brojeva ima: %d",br );
+}

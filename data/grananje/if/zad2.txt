@@ -1,0 +1,13 @@
+#include <stdio.h>
+void main()
+{
+	int a;
+	printf("Unesite jedan cijeli broj ");
+	scanf("%d",&a);
+	if (a<=0)
+		printf("Broj nije prirodan");
+	else if (a%2)
+		printf("Broj je neparan");
+	     else
+		printf("Broj je paran");
+}

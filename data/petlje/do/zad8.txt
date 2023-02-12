@@ -1,0 +1,22 @@
+#include<stdio.h> void main ()
+{
+	int broj,znam,p=0;
+	printf("Upisite jedan prirodan broj: ");
+	scanf("%d",&broj);
+	if (broj>0)
+	{
+		do
+		{
+			znam=broj%10;
+			broj=broj/10;
+			if (znam%2)
+			{
+				p=1;
+				break;
+			 }
+		} while(broj>0); 
+		(p==0)? printf("Broj je potpuno paran"):printf("Nije potpuno paran");
+	 }
+	 else
+		printf("Niste upisali prirodni broj!");
+}

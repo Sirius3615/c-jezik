@@ -1,0 +1,22 @@
+#include<graphics.h>
+#include<conio.h>
+int gd, gm;
+main()
+{
+	gd=DETECT;
+	initgraph(&gd, &gm,"");
+	setcolor(4);
+	setlinestyle(5,1,1);
+	line(320,0,320,480);
+	line(0,240,640,240);
+	setcolor(1);
+	rectangle(50,50,280,200);
+	setfillstyle(3,2);
+	bar(360,280,600,440);
+	setcolor(5);
+	setfillstyle(2,5);
+	bar3d(360,50,560,200,200/4,1);
+	setfillstyle(0,5);
+	bar3d(50,290,250,420,200/4,0);
+	getch();
+}

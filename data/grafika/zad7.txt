@@ -1,0 +1,30 @@
+#include<stdio.h> 
+#include<graphics.h>
+#include<conio.h>
+int gd, gm,a,b,dx,dy,i;
+void main()
+{	
+	printf("Upisite duljine kateta pravokutnog trokuta: ");
+	scanf("%d,%d",&a,&b);
+	printf("Upisite udaljenost od osi y: ");
+	scanf("%d",&dx);
+	printf("Upisite udaljenost od osi x: ");
+	scanf("%d",&dy);
+	gd=DETECT;
+	initgraph(&gd, &gm,"");
+	line(320,0,320,480);
+	line(0,240,640,240);
+	for (i=1;i<30;i++)
+	line (20*i,245,20*i,235);
+	for (i=1;i<25;i++)
+	line(315,20*i,325,20*i);
+	dx=320+20*dx;
+	dy=240-20*dy;
+	moveto(dx,dy);
+	a=a*20;
+	b=b*20;
+	line(dx,dy,dx+a,dy);
+	line(dx,dy,dx,dy-b);
+	line(dx+a,dy,dx,dy-b);
+	getch();
+}

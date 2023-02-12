@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+	int a;
+	printf("Unesite cijeli broj ");
+	scanf("%d",&a);
+	switch (a%12)
+	{
+		case 0: printf("Sijecanj");break;
+		case 1: printf("Veljaca");break;
+		case 2: printf("Ozujak");break;
+		case 3: printf("Travanj");break;
+		case 4: printf("Svibanj");break;
+		case 5: printf("Lipanj");break;
+		case 6: printf("Srpanj");break;
+		case 7: printf("Kolovoz");break;
+		case 8: printf("Rujan");break;
+		case 9: printf("Listopad");break;
+		case 10: printf("Studeni");break;
+		case 11: printf("Prosinac");break;
+	}
+}

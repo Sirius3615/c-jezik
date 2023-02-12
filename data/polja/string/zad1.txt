@@ -1,0 +1,33 @@
+1. naèin:
+
+
+#include <stdio.h>
+void main()
+{
+	char a[80];
+int i;
+	printf("upisite niz znakova: ");
+	gets(a);
+	while (a[i+1]!='\0')
+		i++;
+	printf("upisali ste niz: ");
+	puts(a);
+	printf("Duljina mu je %d znakova",i+1);
+}
+
+
+
+
+2. naèin:
+
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+	char a[80];
+	int n;
+	printf("unesi string: ");
+	gets(a); /*unošenje niza znakova*/
+	n=strlen(a); /*pozivanje funkcije strlen*/
+	printf("%d",n);
+}

@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+#define pi 3.14
+void main()
+{	
+	float a,b,c,o,ob,veca,r;
+	printf("Unesite duljine kateta pravokutnog trokuta");
+	scanf("%f, %f", &a, &b);
+	if ((a>0)&&(b>0))
+	{
+		c=sqrt(pow(a,2)+pow(b,2));
+		if ((a>b))
+		{
+			veca=a;
+			r=b;
+		}
+		else
+		{
+			veca=b;
+			r=a;
+		}
+		ob=pow(r,2)*pi*veca/3;
+		o=r*pi*(r+c);
+		printf("oplosje je %.2f, a obujam %.2f", o, ob);
+	}
+	else
+		printf("Upisani brojevi ne mogu biti stranice trokuta");
+}

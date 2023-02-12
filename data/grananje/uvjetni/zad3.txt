@@ -1,0 +1,9 @@
+#include <stdio.h>
+void main()
+{
+	int a,b;
+	printf("\n Upisite jedan broj: ");
+	scanf("%d",&a);
+	b=(a<0)? -a : a;
+	printf("\n Apsolutna vrijednost ucitanog broja je %d",b);
+}

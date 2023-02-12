@@ -1,0 +1,34 @@
+#include<stdio.h> void main()
+{
+	float zbroj=0,s,v,t,min=32767,max=0,pr;
+	int i=0,bolmin,bolmax;
+	printf("Podaci se unose sve dok se za vrijeme ne unese nula ili negativan broj!\n");
+	printf("Upisite duljinu staze u km: ");
+	scanf("%f",&s);
+	do
+	{
+		printf("Unesite vrijeme prolaska %d. bolida u minutama: ",i+1);
+		scanf("%f",&t);
+		if (t>0)
+		{
+			i++;
+			t/=60;
+			v=s/t;
+			if (v>max)
+			{
+				max=v;
+				bolmax=i;
+			}
+			if ((v<min))
+			{
+				min=v;
+				bolmin=i;
+			}
+			zbroj+=v;
+		}
+	}while (t>0);
+	pr=zbroj/i;
+	printf("\nProsjecna brzina je %.2f km/h",pr);
+	printf("\nNajveca brzina je %.2f km/h, a postigao ju je bolid %d",max,bolmax);
+	printf("\nNajmanja brzina je %.2f km/h, a postigao ju je bolid %d",min,bolmin);
+} 

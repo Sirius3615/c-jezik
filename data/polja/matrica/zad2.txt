@@ -1,0 +1,30 @@
+#include <stdio.h>
+/*funkcija koja matricu mijenja u jedinicnu*/
+void zamijeni(int x[2][2])
+{
+	int i,j;
+	for(i=0;i<2;i++)
+			for(j=0;j<2;j++)
+				x[i][j]=1;
+
+}
+
+void main(void)
+{
+	int i,j,x[2][2]={{5,10},{15,20}};
+	printf("\nMatrica prije poziva funkcije je\n");
+	for(i=0;i<2;i++)
+	{
+			for(j=0;j<2;j++)
+				printf("%d\t",x[i][j]);
+			printf("\n");
+	}
+	zamijeni(x);
+	printf("\nMatrica nakon poziva funkcije je\n");
+	for(i=0;i<2;i++)
+	{
+			for(j=0;j<2;j++)
+				printf("%d\t",x[i][j]);
+			printf("\n");
+	}
+}

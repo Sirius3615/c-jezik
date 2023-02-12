@@ -1,0 +1,50 @@
+#include <stdio.h>
+int n,m1,m2;
+void upisi(int x[30])
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d: ",i+1);
+		scanf("%d",&x[i]);
+	}
+}
+
+void sortiraj (int x[30])
+{
+	int pom,i,j;
+		for (i=m1-1;i<m2-1;i++)
+			for (j=i+1;j<m2;j++)
+				if (x[j]<x[i])
+				{
+					pom=x[i];
+					x[i]=x[j];
+					x[j]=pom;
+				}
+}
+
+void ispisi (int x[30])
+{
+	int i;
+	for (i=0;i<n;i++)
+		printf("%d ",x[i]);
+}
+
+void main()
+{
+  int a[30];
+	printf("\n upisite broj elemenata u polju: ");scanf("%d",&n);
+	if (n<30)
+	{
+		printf("Upisite elemente niza: \n");
+		upisi(a);
+		printf("\n upisite mjesto od kojeg zelite krenuti: ");
+		scanf("%d",&m1);
+		printf("\n Upisite mjesto na kojem zelite zavrsiti: ");
+		scanf("%d", &m2);
+		sortiraj(a);
+		printf("novodobiveni niz je:\n");
+		ispisi(a);
+	}
+	else printf("upisali ste previse elemenata");
+}

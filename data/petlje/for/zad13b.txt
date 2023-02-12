@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int i,n,p=1;
+	float x,s=0;
+	printf ("Do kojeg broja zelite zbrajati: ");
+	scanf("%d",&n);
+	printf("Upisite broj x: ");
+	scanf("%f",&x);
+	for (i=1;i<=n;i++)
+	{
+		s+=p*pow(x,i)/i;
+		p=-p;
+	}
+	printf("\n%.2f", s);
+}

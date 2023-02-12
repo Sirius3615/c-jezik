@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	struct podaci
+	{
+		char ime[15];
+		char prezime[15];
+		char adresa[30];
+		char telefon[15];
+	 } kupci;
+	FILE *f;
+	int i,n;
+	f=fopen("kupci.dat","w+");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+  printf ("Koliko imate kupaca: ");
+  scanf ("%d", &n);
+
+	/*pisanje u datoteku*/
+  for(i=1;i<=n;i++)
+	{
+		printf ("\nUpisite podatke za %d kupca\n", i);
+		printf("Ime: ");
+		scanf("%s",kupci.ime);
+		printf("Prezime: ");
+		scanf("%s",kupci.prezime);
+		printf("Adresa: ");
+		scanf("%s",kupci.adresa);
+		printf("Telefon: ");
+		scanf("%s",kupci.telefon);
+		fwrite(&kupci,sizeof(struct podaci),1,f);
+	 }
+		fclose(f);
+	/*ispis kupaca na zaslon radi kontrole*/
+	f=fopen("kupci.dat","r");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	for (i=1;i<=n;i++)
+	{
+	fread(&kupci,sizeof(struct podaci),1,f);
+	printf("\nKupac %d",i);
+	printf("\nIme: %s\nPrezime: %s\nAdresa: %s\nTelefon: %s",kupci.ime,kupci.prezime,kupci.adresa,kupci.telefon);
+	}
+	fclose(f);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Funkcije</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+</head>
+
+<body bgcolor="#ECF994">
+<p><font size="2" face="Arial, Helvetica, sans-serif">&gt; Funkcije su cjelovite 
+skupine naredbi koje izvršavanjem ispunjavaju određene zahtjeve.<br>
+  &gt; Omogućavaju razlaganje problema na jednostavnije manje cjeline, čime doprinose 
+  boljoj preglednost izvornog koda i jednostavnijem pronalaženju i otklanjanju 
+  pogrešaka = <strong>STRUKTURNO PROGRAMIRANJE</strong><br>
+  &gt; Top-down je općenit postupak kojim se dani problem raščlanjuje na manje 
+  zadatke tj. module. Pojedini moduli tada se rješavaju ili, ako je potrebno, 
+  ponovo dijele na nove module. <br>
+&gt; Funkcija se definira na slijedeći način:</font><font size="2"><br>
+<strong><font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tip_funkcije ime_funkcije(najava 
+liste_argumenata)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;najava lokalnih varijabli;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;naredbe;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return izlazna_vrijednost;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</font></strong><br>
+<font face="Arial, Helvetica, sans-serif">gdje: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>&nbsp;<font face="Courier New, Courier, mono">tip_funkcije</font></strong> 
+  određuje tip vrijednosti koju pozvana funkcija vraća u nadređenu funkciju, a 
+  može biti bilo koji<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; od osnovnih tipova podataka (int, char, float, 
+double, void),<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>&nbsp;<font face="Courier New, Courier, mono">ime_funkcije</font></strong> 
+  je identifikator preko kojeg se funkcija poziva, dok je<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>&nbsp;<font face="Courier New, Courier, mono">lista_argumenata</font></strong> 
+  lista formalnih parametara sa pripadajućim tipovima preko kojih se niz podataka 
+  iz nadređene<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; funkcije prenose u pozvanu funkciju. </font></font><br>
+  <font size="2" face="Arial, Helvetica, sans-serif">&gt; Funkcija u nadređeni 
+  program vraća jednu ili niti jednu vrijednost ovisno o tipu funkcije.<br>
+  &gt; Za prijenos vrijednosti u nadređeni program koristi se naredba <strong><font face="Courier New, Courier, mono">return;</font></strong>.<br>
+  &gt; Funkcija se poziva na slijedeći način:</font><font size="2"><br>
+  <strong><font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ime_funkcije(stvarna lista_argumenata);</font></strong><br>
+  <font face="Arial, Helvetica, sans-serif">&gt; Funkcije se mogu pozivati u izrazima, 
+  petljama, ili kao argumenti u pozivima drugih funkcija.<br>
+  &gt; Svaka korištena funkcija se mora najaviti prije poziva.<br>
+  &gt; Podaci iz nadređenih funkcija prenose se na dva načina:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. pomoću vrijednosti (<strong>call by value</strong>) 
+  - promjena vrijednosti argumenata unutar pozvane funkcije ne utječe <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;na promjenu vrijednosti prenesenih varijabli u nadređenoj 
+  funkciji. <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. pomoću adrese (<strong>call by reference</strong>) 
+  - promjena vrijednosti argumenta pozvane funkcije utječe na promjenu <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vrijednosti prenesenih varijabli nadređene funkcije 
+  (u pozvanu funkciju prenose se adrese varijabli nadređene funkcije). <br>
+  &gt; <strong>STOG</strong> je dinamički dio memorije koji se upotrebljava za 
+  pohranjivanje podataka koji se privremeno koriste u određenim djelovnima programa.<br>
+  &gt; Stog se puni i prazni prema principu &quot;zadnji unutra - prvi van&quot; 
+  (eng. LIFO &quot; last in - first out&quot;)<br>
+  &gt; Rekurzivna funkcija je funkcija koja poziva samu sebe.<br>
+  &gt; Svaka rekurzija mora imati uvjet zaustavljanja koji će joj omogućiti izlaz.<br>
+  &gt; Za pohranjivanje rezultata i povratak iz rekurzije upotrebljava se STOG.<br>
+  &gt; Svaki poziv rekurzije mora se približavati uvjetu zaustavljanja.</font></font></p>
+</body>
+</html>

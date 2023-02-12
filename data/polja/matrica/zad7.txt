@@ -1,0 +1,51 @@
+#include <stdio.h>
+int c[10][10];
+/*program mnozi kvadratne matrice istog red*/
+void upisi (int m[10][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+			scanf("%d",&m[i][j]);
+}
+void mnozi(int y[10][10],int z[10][10],int n)
+{
+	int d,i,j;
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+		{
+			c[i][j]=0;
+			for(d=0;d<n;d++)
+				c[i][j]+=y[i][d]*z[d][j];
+		}
+}
+
+
+void ispisi (int m[10][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%d\t",m[i][j]);
+		printf("\n");
+	}
+}
+
+void main()
+{
+	int a[10][10],b[10][10],i,j,x;
+	printf("Koliko redaka i stupaca ");
+	scanf("%d",&x);
+	printf("upisite elemente prve matrice:\n");
+	upisi (a,x);
+	printf("upisite elemente druge matrice:\n ");
+	upisi(b,x);
+	mnozi(a,b,x);
+	printf("\n Prva matrica je \n");
+	ispisi(a,x);
+	printf("\n Druga matrica je \n");
+	ispisi(b,x);
+	printf("Umnozak matrica je\n");
+	ispisi(c,x);
+}

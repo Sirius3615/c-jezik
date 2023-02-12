@@ -1,0 +1,68 @@
+1. naèin: Ne prepoznaje veliko i malo slovo
+
+#include <stdio.h>
+#include <string.h>
+int n;
+int trazi (char a[80], char b)
+{
+	int i,k=0;
+	for(i=0;i<=n;i++)
+		if (a[i]==b)
+			k++;
+	return k;
+}
+
+void main()
+{
+	char a[80],b;
+	int br;
+	printf("Unesite niz znakova: ");
+	gets(a);
+	n=strlen(a)-1;
+	printf("upisite slovo koje trazite: ");
+	scanf("%c",&b);
+	br=trazi(a,b);
+	if (br!=0)
+		printf("znak %c se u ucitanom stringu pojavljuje %d puta",b,br);
+	else
+		printf("znaka %c nema u stringu",b);
+}
+
+
+
+2. naèin: Broji i malo i veliko slovo
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int n;
+int trazi (char a[80], char b)
+{
+char c;	
+int i,k=0;
+	for(i=0;i<=n;i++)
+	{
+		a[i]=toupper(a[i]);
+		c=toupper(b);
+		if (a[i]==c) k++;
+	}
+	return k;
+}
+
+void main()
+{
+	char a[80],b;
+	int br;
+	printf("Unesite niz znakova: ");
+	gets(a);
+	n=strlen(a)-1;
+	printf("upisite slovo koje trazite: ");
+	scanf("%c",&b);
+	br=trazi(a,b);
+
+	if (br!=0)
+		printf("znak %c se u ucitanom stringu pojavljuje %d puta",b,br);
+	else
+		printf("trazenog znaka nema u upisanom nizu znakova");
+}

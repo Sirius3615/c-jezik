@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>polja (nizovi)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+</head>
+
+<body bgcolor="#ECF994">
+<div align="left"><img src="../img/l1_b10_over.png" width="74" height="24"></div>
+<p><font size="2" face="Arial, Helvetica, sans-serif"> &gt; Niz je ograničen uređen 
+  skup elemenata istog tipa koji imaju isto ime, a pristupa im se pomoću cjelobrojnih 
+  nenegativnih indeksa.<br>
+  &gt; Ime niza ne smije biti jednako imenu neke druge varijable u programu.<br>
+  &gt; Prvi element niza ima indeks 0.<br>
+  &gt; Prilikom deklaracije niza obavezno se mora definirati njegova maksimalna 
+  duljina.<br>
+  &gt; Duljina deklariranog niza ne može se mijenjati tijekom izvođenja programa.<br>
+  &gt; Navede li se u programu prevelik ili negativan indeks program prevoditelj 
+  neće javiti pogrešku.<br>
+&gt; Jednodimenzionalni niz najavljuje se navođenjem tipa elemenata, imena niza 
+i njegove duljine:<br>
+  <strong><font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tip_elemenata ime[broj_elemenata];</font></strong><br>
+  gdje je: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <strong><font face="Courier New, Courier, mono">tip_elemenata</font></strong> 
+  jedan od osnovnih tipova podataka u C-u (int, float, double, char), a odnosi 
+  se na tip elemenata koji će se upisivati u niz. <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <strong><font face="Courier New, Courier, mono">ime</font></strong> 
+  - identifikator, a<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <strong><font face="Times New Roman, Times, serif">broj_elemenata</font></strong> 
+  najveći mogući broj elemenata koji se mogu upisati u dani niz.<br>
+&gt; Deklaracijom jednodimenzionalnog niza u memoriji se za svaki element rezervira 
+zasebna memorijska lokacija. Rezervirane lokacije obično idu jedna iza druge. 
+<br>
+  &gt; Ako se niz deklarira kao globalna varijabla (prije funkcije <strong><font face="Courier New, Courier, mono">main()</font></strong>) 
+  onda je početna vrijednost svih elemenata niza jednaka 0. <br>
+&gt; Ako se deklarira kao lokalna varijabla onda elementi niza nisu inicijalizirani 
+pa su popunjeni slučajnim vrijednostima (ovisno o tome što se nalazilo na tom 
+mjestu u memoriji prije navedene deklaracije). <br>
+&gt; Za učitavanje i ispis vrijednosti elemenata niza koriste se programske petlje 
+u kombinaciji s naredbama učitavanja i ispisa:<br>
+  <strong><font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (kv = 0; kv&lt;n; kv++)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf (&quot;\n format&quot;, ime_polja[kv]);<br>
+  ili<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (kv = 0; kv&lt;n; kv++)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf (&quot;\n format&quot;, &amp;ime_polja[kv]);</font></strong><br>
+  gdje je: <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <font face="Courier New, Courier, mono"><strong>kv</strong></font> 
+  - kontrolna varijabla,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <strong><font face="Courier New, Courier, mono">n</font></strong> 
+  - veličina niza (najveći broj elemenata),<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <strong><font face="Courier New, Courier, mono">format</font></strong> 
+  - format za ispis koji ovisi o tipu elemenata upisanih u niz.<br>
+&gt; Polja (nizovi) mogu biti argumenti funkcije i u funkciju se uvijek prenose 
+pomoću adrese. U pozvanu funkciju prenosi se adresa prvog člana niza. Argument 
+pozvane funkcije mora odgovarati deklaraciji polja koje se prenosi.<br>
+  &gt; Za pretraživanje niza koriste se programske petlje u kombinaciji s naredbama 
+  grananja.<br>
+  &gt; Sortirati niz znači poredati njegove elemente u rastućem ili padajućem 
+  redoslijedu.<br>
+  &gt; Za sortiranje elemenata niza koriste se gotovi algoritmi (npr. algoritam 
+  za sortiranje metodom razmjene ili algoritam za sortiranje metodom mjehurića). 
+  </font> </p>
+</body>
+</html>

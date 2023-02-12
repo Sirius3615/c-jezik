@@ -1,0 +1,21 @@
+#include<graphics.h>
+#include<conio.h>
+int gd, gm;
+main()
+{
+	gd=DETECT;
+	initgraph(&gd, &gm,"");
+	setcolor(4);
+	setlinestyle(5,1,1);
+	line(320,0,320,480);
+	line(0,240,640,240);
+	setcolor(1);
+	rectangle(50,50,280,200);
+	setfillstyle(3,2);
+	bar(360,280,600,440);
+	setcolor(3);
+	circle(165,365,100);
+	settextstyle(1,0,10);
+	outtextxy(340,50, "Dobro dosli!");
+	getch();
+}

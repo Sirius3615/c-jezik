@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,m,i=0;
+	printf("Upisite dva cijela broja, odvojena zarezom: ");
+	scanf("%d, %d",&n, &m);
+	while (n>=m)
+	{
+		n=n-m;
+		i++;
+	}
+	printf("Rezultat je %d, a ostatak %d",i,n);
+}

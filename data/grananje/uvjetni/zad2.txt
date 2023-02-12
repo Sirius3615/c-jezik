@@ -1,0 +1,9 @@
+#include <stdio.h>
+void main()
+{
+	int a,b,rez;
+	printf("\n Upisite dva broja: ");
+	scanf("%d,%d",&a,&b);
+	rez = (a<b)? b-a:a-b;
+	printf("\n Rezultat je: %d",rez);
+}

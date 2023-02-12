@@ -1,0 +1,11 @@
+#include<stdio.h> void main()
+{
+	int n,br=0;
+	printf("Brojevi se unose sve dok se ne unese -1!\n");
+	do
+	{
+		scanf("%d",&n);
+		if(!(n%5)) br++;
+	}while (n!=-1);
+   printf("Djeljivih s 5 ima %d",br);
+}

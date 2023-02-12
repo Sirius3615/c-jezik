@@ -1,0 +1,35 @@
+#include<stdio.h>
+int a[10][10],n,i,j,k;
+main()
+{
+	printf("Unesi red matrice ");
+	scanf("%d",&n);
+	if (n<1 || n>10)
+		printf("Red matrice mora biti od 1 do 10");
+	else
+	{
+		printf("\n Unesi elemente matrice \n ");
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+			{
+				printf("a[%d][%d] = ",i,j);
+				scanf("%d",&a[i][j]);
+			}
+		for(i=0;i<n;i++)
+			for(j=0;j<n;j++)
+				if(i>j && a[i][j]!=0)
+					k=1;
+		printf("Polazna matrica je \n");
+		for(i=0;i<n;i++)
+		{
+			for(j=0;j<n;j++)
+				printf("%d\t",a[i][j]);
+			printf("\n");
+		}
+		if(k==0)
+			printf("Matrica je gornje trokutasta");
+		else
+			printf("Matrica nije gornje trokutasta");
+
+	}
+}

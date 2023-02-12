@@ -1,0 +1,39 @@
+#include<stdio.h>
+ main()
+ {
+	int a,b,c,d,e,f,op;
+	printf ("Upisite brojnik i nazivnik prvog razlomka: ");
+	scanf("%d, %d", &a,&b);
+	printf ("Upisite brojnik i nazivnik drugog razlomka: ");
+	scanf("%d, %d", &c, &d);
+	if ((b==0) || (d==0))
+		printf ("Nazivnik razlomka ne moze biti nula!");
+	else
+	{
+		printf("\nZelite li izracunati:\n\t1)zbroj\n\t2)razliku\n\t
+3)umnozak\n\t4)kvocijent\nupisanih razlomaka:");
+		scanf("%d",&op);
+		switch (op)
+		{
+			case 1:
+				e=a*d+b*c;
+				f=b*d;
+			break;
+			case 2:
+				e=a*d-b*c;
+				f=b*d;
+			break;
+			case 3:
+				e=a*c;
+				f=b*d;
+			break;
+			case 4:
+				e=a*d;
+				f=b*c;
+			break;
+			default: printf("upisali ste krivi broj");
+			break;
+		}
+		}
+		printf("trazeni rezultat je %d/%d",e,f);
+ }

@@ -1,0 +1,43 @@
+#include <stdio.h>
+int a[10],i;
+long int n;
+void formiraj(long int b)
+{
+	while (b>0)
+	{
+		a[i]=b%10;
+		b/=10;
+		i++;
+	 }
+}
+void sortiraj ()
+{
+	int pom,j,k;
+	for (k=0;k<i-1;k++)
+			for (j=k+1;j<i;j++)
+				if (a[j]>a[k])
+				{
+					pom=a[k];
+					a[k]=a[j];
+					a[j]=pom;
+				}
+}
+int vrati ()
+{
+	int j,pom=1,broj=0;
+	for (j=i-1;j>=0;j--)
+	{
+		broj+=pom*a[j];
+		pom*=10;
+	 }
+	 return broj;
+}
+void main()
+{
+
+	printf("\n upisite broj");
+	scanf("%ld",&n);
+	formiraj(n);
+	sortiraj();
+	printf("trazeni broj je %d", vrati());
+}

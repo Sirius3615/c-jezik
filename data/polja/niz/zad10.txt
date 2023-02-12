@@ -1,0 +1,37 @@
+#include <stdio.h> int n;
+void upisi(int x[30])
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		printf("%d: ",i+1);
+		scanf("%d",&x[i]);
+	 }
+}
+int trazi(int x[30], int t)
+{
+	int i,br=0;
+	for (i=0; i<n; i++)
+			if (x[i]==t) br++;
+	return br;
+}
+
+void main()
+{
+	int a[10],b,t;
+	printf("upisite broj elemenata niza: "); scanf("%d",&n);
+	if (n<=10 && n>0)
+	{
+		printf("\n upisite elemente:\n");
+		upisi(a);
+		printf("\n Koji broj zelite pronaci? ");
+		scanf("%d",&t);
+		b=trazi(a,t);
+		if (b==0)
+			printf("\n trazenog broja nema u danom nizu");
+		else
+			printf("\n trazeni broj pojavljuje se %d puta u nizu", b);
+	}
+	 else
+		printf("\n upisali ste krivi broj");
+}

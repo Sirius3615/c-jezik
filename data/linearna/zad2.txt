@@ -1,0 +1,11 @@
+#include<stdio.h>
+int r;
+float o,p,pi=3.14159;
+void main(void)
+{
+	printf("\nupisi polumjer kruga:");
+	scanf("%d",&r);
+	o=2*r*pi;
+	p=r*r*pi;
+	printf("opseg danog kruga je %.2f, a povrsina %.2f",o,p);
+}

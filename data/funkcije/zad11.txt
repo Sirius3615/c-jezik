@@ -1,0 +1,18 @@
+#include <stdio.h>
+int pretvori (int n, int b)
+{
+	if (n>=b) pretvori(n/b, b);
+	printf("%d ",n%b);
+}
+void main (void)
+{
+	int broj, baza;
+	printf("\n Upisite jedan prirodni broj => ");
+	scanf("%d",&broj);
+	printf("\n Upisite bazu => ");
+	scanf("%d",&baza);
+	if (baza>=10)
+		printf("\nBaza mora biti <10");
+	else
+		pretvori(broj,baza);
+}

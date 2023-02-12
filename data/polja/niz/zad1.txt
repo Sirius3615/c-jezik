@@ -1,0 +1,22 @@
+#include <stdio.h>
+int i,n,a[20];
+void main()
+{
+	printf("upisite broj elemenata u polju: ");
+	scanf("%d",&n);
+	if (n<=20 && n>0)
+	{
+		printf("\n upisi elemente polja:\n");
+		for (i=0; i<n; i++)
+		{
+			printf("a[%d] ",i);
+			scanf("%d",&a[i]);
+		}
+		printf("\n ucitani elementi su: \n");
+		for (i=0; i<n; i++)
+			printf("\n %d. el. je %d",i, a[i]);
+	 }
+	 else
+		printf("\n upisali ste krivi broj");
+}
+

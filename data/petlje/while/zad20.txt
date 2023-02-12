@@ -1,0 +1,19 @@
+#include<stdio.h> #include<math.h>
+void main()
+{
+	int n=0,m;
+	double naz=1,broj;
+	float x,s=1;
+	printf("Upisite broj x: ");
+	scanf("%f",&x);
+	printf("Na koliko decimala zelite tocnost? ");
+	scanf("%d",&m);
+	while (fabs(s-exp(x))>=pow(10,-(m+1)))
+	{
+		n++;
+		broj=pow(x,n);
+		naz*=n;
+		s+=broj/naz;
+	}
+	printf("\nRezultat je dobiven u %d koraka, a iznosi %.6f.",n,s);
+}

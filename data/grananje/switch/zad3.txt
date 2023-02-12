@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+	int i;
+	float a,b,p,o,d;
+	printf("\n unesite duljine stranica a i b: ");
+	scanf("%f,%f", &a, &b);
+	if (a>0 && b>0)
+	{
+		printf("\n zelite li izracunati:\n");
+		printf("1)opseg \n 2)povrsinu \n 3)duljinu dijagonale\n");
+		printf("\n izaberite zeljeni broj: ");
+		scanf("%d",&i);
+		switch (i)
+		{
+			case 1:	o=2*(a+b);printf("\n Opseg pravokutnika iznosi %.2f",o);
+							break;
+			case 2:	p=a*b; printf("\n Povrsina pravokutnika iznosi %.2f",p);
+							break;
+			case 3:	d=sqrt(a*a+b*b);printf("\n duljina dijagonale je %.2f",d);
+							break;
+			default: printf("\n izabrali ste pogresan broj");break;
+		}
+	}
+	else
+		printf("\n niste upisali stranice pravokutnika");
+}

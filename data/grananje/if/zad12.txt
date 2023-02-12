@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+float a,b,c,d,x1,x2;
+void main()
+{
+	printf(" Ucitajte koeficijente kvadratne jednadzbe a, b i c: ");
+	scanf("%f,%f,%f",&a,&b,&c);
+	if (a!=0)
+	{
+		d=b*b-4*a*c;
+		if (d>0)
+		{
+			d=sqrt(d);
+			x1=(-b+d)/(2*a);
+			x2=(-b-d)/(2*a);
+			printf(" x1=%.2f \n x2=%.2f",x1,x2);
+		}
+		else if (d==0)
+				{
+						x1=(-b/(2*a));
+						printf(" x1=x2=%.2f",x1);
+	 			}
+	 			else
+	 			{
+					x1=-b/(2*a);
+					d=-d;
+					x2=sqrt(d)/(2*a);
+					if (x2<0)
+						printf(" x1=%.2f+%.2fi \n x2=%.2f-%.2fi",x1,-x2,x1,-x2);
+					else
+						printf(" x1=%.2f+%.2fi \n x2=%.2f-%.2fi",x1,x2,x1,x2);
+	 			}
+	}
+	else
+			printf(" jednadzba nije kvadratna");
+}

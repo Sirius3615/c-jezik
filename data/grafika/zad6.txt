@@ -1,0 +1,14 @@
+#include<graphics.h> 
+#include<conio.h>
+int gd, gm,i;
+void main()
+{
+	gd=DETECT;
+	initgraph(&gd, &gm,"");
+	for (i=0;i<15;i++)
+	{
+		setcolor(i);
+		circle (320,240,10+15*i);
+	}
+	getch();
+}

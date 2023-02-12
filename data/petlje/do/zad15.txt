@@ -1,0 +1,36 @@
+#include<stdio.h> void main()
+{
+	int z,i=100,broj,z1,broj1;
+	do
+	{
+		broj=i-1;
+		z=0;
+		do
+		{
+			if (!(i%broj))
+			{
+				z+=broj;
+				broj--;
+			}
+			else
+				broj--;
+		}while(broj!=0);
+		if (z!=1)
+		{
+			broj1=z-1;
+			z1=0;
+			do
+			{
+				if (!(z%broj1))
+				{
+					z1+=broj1;
+					broj1--;
+				}
+				else
+					broj1--;
+			}while(broj1!=0);
+			if (z1==i) printf("\n%d, %d", i, z);
+		}
+		i++;
+	}while (i<=999);
+}

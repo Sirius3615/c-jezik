@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>matrice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+</head>
+
+<body bgcolor="#ECF994">
+<div align="left"><img src="../img/l1_b11_over.png" width="74" height="24"></div>
+<p><font size="2" face="Arial, Helvetica, sans-serif">&gt; Dvodimenzionalni niz 
+  ekvivalentan je pojmu matrice u matematici.</font><br>
+&gt;<font size="2" face="Arial, Helvetica, sans-serif"> Dvodimenzionalni niz 
+  je uređeni skup podataka istog tipa koji imaju isto ime, a svaki element određen 
+  je s dva cjelobrojna indeksa. <br>
+  &gt; Prvi element niza ima indekse reda i stupca 0.</font></p>
+<table width="365" border="1" align="center" bordercolor="#000000">
+  <tr> 
+    <td width="66">&nbsp;</td>
+    <td width="66"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">1. 
+        stupac</font></div></td>
+    <td width="68"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">2. 
+        stupac </font></div></td>
+    <td width="66"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">3. 
+        stupac </font></div></td>
+    <td width="66"><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">4. 
+        stupac</font></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">1. 
+        red </font></div></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">2. 
+        red</font></div></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">347 
+        </font></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif">3. 
+        red </font></div></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p><font size="2" face="Arial, Helvetica, sans-serif"> Broj 347 nalazi se u 2. 
+  redu i 3. stupcu danog polja A. To znači da je </font></p>
+<p><font size="2" face="Arial, Helvetica, sans-serif">
+<table border="0" align="center">
+  <tr>
+    <td> <div align="left"><font size="3" face="Courier New, Courier, mono"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A[1,2] 
+        = 347</strong></font></div></td>
+  </tr>
+  <tr>
+    <td><img src="../img/matrice1.gif"></td>
+  </tr>
+</table>
+</font>
+</p><font size="2" face="Arial, Helvetica, sans-serif">&gt; Dvodimenzionalni 
+niz najavljuje se navođenjem tipa elemenata niza, imena niza, broja redova i broja 
+stupaca:<br>
+<strong><font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tip_elemenata ime[broj_redova][broj_stupaca];</font></strong><br>
+&gt; Za učitavanje i ispis vrijednosti elemenata niza koriste se dvije ugniježđene 
+programske petlje u kombinaciji s naredbama učitavanja i ispisa.<br>
+&gt; Za pretraživanje niza koriste se dvije programske petlje u kombinaciji s 
+naredbama grananja.<br>
+&gt; Matrice s istim brojem redova i stupaca nazivaju se kvadratne.<br>
+&gt; Kvadratna matrica ima glavnu i sporednu dijagonalu.<br>
+&gt; Na glavnoj dijagonali kvadratne matrice nalaze se elementi za koje vrijedi 
+i = j.<br>
+&gt; Na sporednoj dijagonali kvadratne matrice nalaze se elementi za koje vrijedi 
+i+j=n+1 (n je red kvadratne matrice)  u C-u vrijedi pravilo i+j=n-1 zbog toga 
+što vrijednosti indeksa počinju od nule.<br>
+</font> 
+<p>
+<table border="0" align="center">
+  <tr>
+    <td valign="bottom"><font color="#0000ff" size="3" face="Arial, Helvetica, sans-serif">elementi 
+      sporedne dijagonale</font> </td>
+    <td><table border="1" align="center">
+  <tr> 
+    <td width="25" bgcolor="#ff0000"><font size="3" face="Arial, Helvetica, sans-serif">a<code>00</code></font></td>
+    <td width="25"><font size="3" face="Arial, Helvetica, sans-serif">a<code>01</code></font></td>
+    <td width="25"><font size="3" face="Arial, Helvetica, sans-serif">a<code>02</code></font></td>
+    <td width="25" bgcolor="#0000ff"><font size="3" face="Arial, Helvetica, sans-serif">a<code>03</code></font></td>
+  </tr>
+  <tr> 
+    <td><font size="3" face="Arial, Helvetica, sans-serif">a<code>10</code></font></td>
+    <td bgcolor="#ff0000"><font size="3" face="Arial, Helvetica, sans-serif">a<code>11</code></font></td>
+    <td bgcolor="#0000ff"><font size="3" face="Arial, Helvetica, sans-serif">a<code>12</code></font></td>
+    <td><font size="3" face="Arial, Helvetica, sans-serif">a<code>13</code></font></td>
+  </tr>
+  <tr> 
+    <td><font size="3" face="Arial, Helvetica, sans-serif">a<code>20</code></font></td>
+    <td bgcolor="#0000ff"><font size="3" face="Arial, Helvetica, sans-serif">a<code>21</code></font></td>
+    <td bgcolor="#ff0000"><font size="3" face="Arial, Helvetica, sans-serif">a<code>22</code></font></td>
+    <td><font size="3" face="Arial, Helvetica, sans-serif">a<code>23</code></font></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#0000ff"><font size="3" face="Arial, Helvetica, sans-serif">a<code>30</code></font></td>
+    <td><font size="3" face="Arial, Helvetica, sans-serif">a<code>31</code></font></td>
+    <td><font size="3" face="Arial, Helvetica, sans-serif">a<code>32</code></font></td>
+    <td bgcolor="#ff0000"><font size="3" face="Arial, Helvetica, sans-serif">a<code>33</code></font></td>
+  </tr>
+</table></td>
+    <td valign="bottom"><font color="#ff0000" size="3" face="Arial, Helvetica, sans-serif">elementi 
+      glavne dijagonale</font></td>
+  </tr>
+</table>
+</p> 
+</body>
+</html>

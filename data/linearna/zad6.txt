@@ -1,0 +1,16 @@
+#include<stdio.h>
+float a1,b1,a2,b2,rz,rr,iz,ir;
+void main(void)
+{
+	printf("\n Upisi prvi kompleksni broj: ");
+	scanf("%f,%f",&a1,&b1);
+	printf(" Upisi drugi kompleksni broj:");
+	scanf("%f,%f", &a2,&b2);
+	rz=a1+a2;
+	rr=a1-a2;
+	iz=b1+b2;
+	ir=b1-b2;
+	printf("\n Upisali ste brojeve %.2f + %.2fi i %.2f + %.2fi",a1,b1,a2,b2);
+	printf("\n Njihov zbroj je %.2f + %.2fi",rz,iz);
+	printf("\n Razlika je %.2f +  %.2fi",rr,ir);
+}

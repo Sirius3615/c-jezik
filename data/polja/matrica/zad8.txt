@@ -1,0 +1,45 @@
+#include <stdio.h>
+void upisi (int x[10][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&x[i][j]);
+		}
+}
+
+void ispisi (int x[10][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%d\t",x[i][j]);
+		printf("\n");
+	}
+}
+void main()
+{
+	int a[10][10],maxr[10],maxs[10],minr[10],mins[10],i,j,n;
+	printf ("upisite red matrice: "); scanf("%d",&n);
+	printf("upisite elemente matrice:\n");
+	upisi(a,n);
+	for(i=0;i<n;i++)
+	{
+		minr[i]=a[i][0];	maxr[i]=a[i][0];
+		mins[i]=a[0][i];	maxs[i]=a[0][i];
+		for (j=1;j<n;j++)
+		{
+			if(a[i][j]<minr[i]) minr[i]=a[i][j];
+			if(a[i][j]>maxr[i]) maxr[i]=a[i][j];
+			if(a[j][i]<mins[i]) mins[i]=a[j][i];
+			if(a[j][i]>maxs[i]) maxs[i]=a[j][i];
+		}
+	}
+	ispisi(a,n);
+	for(i=0;i<n;i++)
+		printf("\n najveci u redu %d je %d, a najmanji %d ", i+1, maxr[i], minr[i]);
+	for(i=0;i<n;i++)
+		printf("\n najveci u stupcu %d je %d, a najmanji %d ", i+1, maxs[i], mins[i]);
+}

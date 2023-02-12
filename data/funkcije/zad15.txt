@@ -1,0 +1,23 @@
+#include<stdio.h>
+void prebaci(int br,int sa, int na, int preko)
+{
+	if (br==1)
+		printf("\n%d disk sa %d diska na %d disk",br,sa,na);
+	else
+	{
+		prebaci(br-1,sa,preko,na);
+		printf("\n%d disk sa %d diska na %d disk",br,sa,na);
+		prebaci(br-1,preko,na,sa);
+	}
+}
+
+void main()
+{
+	int n;
+	printf("Unesite broj diskova ");
+	scanf("%d",&n);
+	if (n<0)
+		printf("\Broj mora biti veæi od 0");
+	else
+		prebaci(n,1,3,2);
+}

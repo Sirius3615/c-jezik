@@ -1,0 +1,13 @@
+#include<stdio.h>
+void main()
+{
+	int broj,brp=0,brn=0;
+	printf("\nProgram ce unositi brojeve sve dok se ne unese 0!\n");
+	while (broj!=0)
+	{
+		printf("Upisite broj: ");
+		scanf("%d",&broj);
+		(broj<0)? brn++: brp++;
+	}
+	printf("Unjeli ste %d pozitivnih i %d negativnih brojeva!",brp-1,brn);
+}

@@ -1,0 +1,21 @@
+#include<stdio.h>
+long int zbroj(long int x)
+{
+
+	if (x==0)
+		return 0;
+	else
+		return (x%10+zbroj(x/10));
+}
+
+void main()
+{
+	long int a,z;
+	do
+	{
+		printf("Unesite prirodan broj");
+		scanf("%ld",&a);
+	}while(a<0);
+	z=zbroj(a);
+	printf("Zbroj znamenki broja %ld je %ld",a,z);
+}

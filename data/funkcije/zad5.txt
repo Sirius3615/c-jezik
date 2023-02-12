@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+/*funkcija za racunanje povrsine*/
+float povrsina(float x,float y)
+{
+	float pov;   /*lokalna varijabla*/
+	pov=x*y;
+	return pov;
+}
+
+/*funkcija za opseg - skraceno pisana*/
+float opseg(float x,float y)
+{
+	return 2*x+2*y;
+}
+
+/*glavni dio programa*/
+void main()
+{
+	float a,b,p;
+	printf("Unesite duljine stranica pravokutnika ==>");
+	scanf("%f,%f",&a,&b);
+	if (a<=0 || b<=0)
+		printf("\nDuljina stranice mora biti veca od 0");
+	else
+	{
+		p=povrsina(a,b);	/*poziv pridruzivanjem varijabli*/ 
+		printf("Povrsina je %.2f\n",p);		
+		printf("Opseg je %.2f",opseg(a,b));/*Poziv unutar printf funkcije*/
+	}
+}	

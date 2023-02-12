@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+	int a,b,c,max,min,mid;
+	printf("Unesi tri cijela broja ");
+	scanf("%d,%d,%d",&a,&b,&c);
+	max=a;
+	if (b>max) max=b;
+	if (c>max) max=c;
+	min=a;
+	if (b<min) min=b;
+	if (c<min) min=c;
+	mid=(a+b+c)-(max+min);
+	printf("Od najmanjeg ka najvecem su \n%d\n%d\n%d",min,mid,max);
+}

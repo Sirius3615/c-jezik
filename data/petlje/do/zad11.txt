@@ -1,0 +1,22 @@
+#include<stdio.h> void main()
+{
+	int f1=1,f2=1,f=2,i,n,br=0;
+	printf("Upisite prirodni broj: ");
+	scanf("%d",&n);
+	if (n>0)
+	{
+		do
+		{
+			for (i=f2+1;i<=f-1;i++)
+			{
+				br++;
+				if (br==n)printf("\n%d",i);
+			}
+			f1=f2;
+			f2=f;
+			f=f1+f2;
+		} while (br<n);
+	}
+	 else
+		printf("Niste upisali prirodni broj!");
+} 

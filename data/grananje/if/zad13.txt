@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int a,b,c,max,min,mid;
+	printf("Upisite tri cijela broja, odvojena zarezom: ");
+	scanf("%d, %d, %d", &a, &b, &c);
+	max=a;
+	if (b>max) max=b;
+	if (c>max) max=c;
+	min=a;
+	if (b<min) min=b;
+	if (c<min) min=c;
+	mid=a+b+c-min-max;
+  printf("\nSrednji je %d, a trazeni rezultat je %.2f", mid, sqrt(abs(mid)));
+}

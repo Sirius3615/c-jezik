@@ -1,0 +1,12 @@
+#include<stdio.h> void main()
+{
+	int n,br=0,s=0;
+	printf("Brojevi se unose sve dok se ne unese broj djeljiv s 3!\n");
+	do
+	{
+		scanf("%d",&n);
+		br++;
+		s+=n;
+	}while (n%3);
+	printf("Ima ih %d, a njihov zbroj je %d",br,s);
+}

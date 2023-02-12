@@ -1,0 +1,23 @@
+#include <stdio.h>
+int i,j,n,pom=1;
+long int f;
+float s,x,pot;
+void main (void)
+{
+	printf("\n Upisite jedan prirodni broj: ");
+	scanf("%d",&n);
+	printf("\n Upisite i jedan realan broj: ");
+	scanf("%f",&x);
+	for(i=1;i<=n;i+=2)
+	  {
+			f=1; pot=x;
+			for (j=2;j<=i;j++)
+			{
+				f*=i;
+				pot*=x;
+			}
+			s+=pom*(pot/float(f));
+			pom=-pom;
+		}
+	printf("Trazeni zbroj je %.2f",s);
+}

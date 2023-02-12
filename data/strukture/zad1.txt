@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+struct kompleksni
+{
+	float re;
+	float im;
+}z1,z2,zbroj,razlika,produkt,kvocijent;
+
+void main(void)
+{
+
+	printf("\nUpisite prvi kompleksan broj ");
+	scanf("%f,%f",&z1.re,&z1.im);
+	printf("\nUpisite drugi kompleksan broj ");
+	scanf("%f,%f",&z2.re,&z2.im);
+	zbroj.re=z1.re+z2.re;
+	zbroj.im=z1.im+z2.im;
+	razlika.re=z1.re-z2.re;
+	razlika.im=z1.im-z2.im;
+	produkt.re=z1.re*z2.re-z1.im*z2.im;
+	produkt.im=z1.re*z2.im+z1.im*z2.re;
+	kvocijent.re=(z1.re*z2.re+z1.im*z2.im)/(pow(z2.re,2)+pow(z2.im,2));
+	kvocijent.im=(z1.im*z2.re-z1.re*z2.im)/(pow(z2.re,2)+pow(z2.im,2));
+	printf("\nZbroj je  %.2f + %.2fi",zbroj.re,zbroj.im);
+	printf("\nRazlika je  %.2f + %.2fi",razlika.re,razlika.im);
+	printf("\nProdukt je  %.2f + %.2fi",produkt.re,produkt.im);
+	printf("\nKvocijent je  %.2f + %.2fi",kvocijent.re,kvocijent.im);
+}

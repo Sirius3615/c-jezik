@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main()
+{
+	float a;
+	int b,z;
+	printf("Upisite jedan realan broj:");
+	scanf("%f", &a);
+	a=a*10;
+	b=(int)a;
+	z=b%10;
+	printf("Prva znamenka iza decimalne tocke je %d", z);
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,m=1,pot;
+	printf("upisite jedan cijeli broj:" );
+	scanf("%d",&n);
+	pot=pow(m,2);
+	while (pot<n)
+	{
+		m++;
+		pot=pow(m,2);
+	}
+	printf("\n%d",m-1);
+}

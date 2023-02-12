@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int i,n;
+	float x,s=0;
+	printf ("Do kojeg broja zelite zbrajati: ");
+	scanf("%d",&n);
+	printf("Upisite broj x: ");
+	scanf("%f",&x);
+	for (i=1;i<=n;i++)
+		s+=sqrt(x)/(2*x-1);
+	printf("\n%.2f", s);
+}

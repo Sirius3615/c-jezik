@@ -1,0 +1,11 @@
+#include <stdio.h>
+void main()
+{
+	int max,a,b,c;
+	printf(" Upisite tri broja: ");
+	scanf("%d,%d,%d",&a,&b,&c);
+	max=a;			/*prvi postaje pretpostavljeno najveci*/
+	if (b>max) max=b;		/*ostali se usporedjuju s max*/
+	if (c>max) max=c;
+	printf ("\n Najveci je %d", max);
+}

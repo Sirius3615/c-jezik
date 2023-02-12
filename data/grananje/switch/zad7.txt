@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<math.h>
+#define pi 3.14
+ main()
+ {
+	int a,b,c,op;
+	float s,o,p;
+	printf("\nZelite li izracunati povrsinu i opseg za:\n\t1) pravokutnik \n\t2)kvadrat \n\t3)trokut \n\t4)krug");
+	printf("\n\nUpisite broj: ");
+	scanf("%d",&op);
+	switch (op)
+		{
+			case 1:
+				printf("Upisite duljine stranica pravokutnika: ");
+				scanf("%d, %d", &a, &b);
+				if ((a>0)&& (b>0))
+				{
+						p=a*b;
+						o=2*(a+b);
+						printf("Povrsina danog pravokutnika je %.2f, a opseg %.2f",p,o);
+				}
+				else printf ("Duljine stranica moraju biti vece od nule!");
+			break;
+			case 2:
+				printf("Upisite duljinu stranica kvadrata: ");
+				scanf("%d", &a);
+				if (a>0)
+				{
+						p=pow(a,2);
+						o=4*a;
+						printf("Povrsina danog kvadrata je %.2f, a opseg %.2f", p,o);
+				}
+				else printf ("Duljine stranica moraju biti vece od nule!");
+			break;
+			case 3:
+				printf("Upisite duljine stranica trokuta: ");
+				scanf("%d, %d, %d", &a, &b, &c);
+				if ((a>0)&& (b>0)&& (c>0))
+					if ((a+b>c) && (a+c>b) && (b+c>a))
+					{
+						o=a+b+c;
+						s=(float)o/2;
+						p=sqrt(s*(s-a)*(s-b)*(s-c));
+						printf("Povrsina danog trokuta je %.2f, a opseg %.2f",p,o);
+					}
+					else printf("Brojevi koje ste upisali ne mogu biti stranice trokuta!");
+				else printf ("Duljine stranica moraju biti vece od nule!");
+			break;
+			case 4:
+				printf("Upisite polumjer kruga: ");
+				scanf("%d", &a);
+				if (a>0)
+				{
+						p=pow(a,2)*pi;
+						o=2*a*pi;
+						printf("Povrsina danog kruga je %.2f, a opseg %.2f",p,o);
+				}
+				else printf ("Polumjer kruga mora biti veci od nule!");
+			break;
+			default: printf("upisali ste krivi broj");
+			break;
+		}
+ }

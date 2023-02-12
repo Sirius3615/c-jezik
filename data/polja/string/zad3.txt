@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+char a[80];
+int n,i,k,br,j;
+void main()
+{
+	printf("upisite jednu recenicu: ");
+	gets(a);
+	n=strlen(a)-1;
+	for(i=0;i<n;i++)
+		if (a[i]==' ' && a[i+1]!=' ') br++;
+			printf("%d",br+1);
+}

@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	long int n,znam,p=0,br=0;
+	printf("upisite jedan binarni broj:" );
+	scanf("%ld",&n);
+	while (n>0)
+		{
+			znam=n%10;
+			n/=10;
+			br+=znam*pow(2,p);
+			p++;
+		}
+	printf("%ld",br);
+}

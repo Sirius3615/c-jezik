@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+void potpisivanje (int x, int y, char niz[240])
+{
+	int raz, i;
+	raz=x-y;
+	for(i=x-1;i>=raz;i--)
+		niz[i]=niz[i-raz];
+	for (i=0;i<raz;i++)
+		niz[i]='0';
+}
+main()
+{
+char a[240],b[240];
+int i,p=0, m,n,max, c[241];
+printf("Upisite prvi broj:");
+gets(a);
+printf("\Upisite drugi broj:");
+gets(b);
+n=strlen(a);
+m=strlen(b);
+max=m;
+if (n>m)
+{
+	potpisivanje(n,m,b);
+	max=n;
+}
+if (m>n)
+	potpisivanje(m,n,a);
+for (i=max;i>0;i--)
+{
+	c[i]=a[i-1]+b[i-1]-96+p;
+	if (c[i]>9)
+	{
+		c[i]=c[i]%10;
+		p=1;
+	 }
+	 else p=0;
+}
+(p==1)? c[0]=1: c[0]=0;
+for (i=0;i<=max;i++)
+{
+	printf("%d",c[i]);
+ }
+}

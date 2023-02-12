@@ -1,0 +1,11 @@
+#include<stdio.h>
+main()
+{
+	float euro, kune, koliko;
+	printf ("Koliko kuna trebate za 1 euro? ");
+	scanf("%f", &euro);
+	printf("Koliko kuna imate? ");
+	scanf("%f", &kune);
+	koliko=kune/euro;
+	printf ("Za svojih %.2f kuna mozete dobit %.2f eura", kune, koliko);
+}

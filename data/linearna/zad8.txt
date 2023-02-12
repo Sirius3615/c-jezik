@@ -1,0 +1,16 @@
+#include <stdio.h>
+void main (void)
+{
+	int a,b,s,r,u,cd,ocd;
+	float k;
+	printf("\n upisite dva cijela broja: ");
+	scanf("%d,%d",&a,&b);
+	s=a+b; 	
+	r=a-b; 	
+	u=a*b; 	
+	cd=a/b; 
+	ocd=a%b;
+	k=(float)a/b;
+	printf("\n Trazeni rezultati su:\n%d+%d=%d\n %d-%d=%d\n %d*%d=%d", a, b,s,a,b,r,a,b,u);
+	printf("\n%d/%d=%d i ostatak %d odnosno %.2f",a,b,cd,ocd,k);
+}

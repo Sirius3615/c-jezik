@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+
+float oplosje(float x)
+{
+	return 6*pow(x,2);
+}
+
+float volumen(float x)
+{
+	return pow(x,3);
+}
+
+float dijagonala(float x)
+{
+	return x*sqrt(3);
+}
+
+void main()
+{
+	float a;
+	int i;
+	printf("Unesite duljinu stranice kocke ==>");
+	scanf("%f",&a);
+	if (a<=0)
+		printf("Stranica mora biti >=0");
+	else
+	{ 
+		printf("\nIzaberite:\n1.Oplosje\n2.Volumen\n3.P.dijagonala");
+		printf("\nUpisite broj  ==>");
+		scanf("%d",&i);
+		switch(i)
+		{
+			case 1:printf("Oplosje je %.2f",oplosje(a)); break;
+			case 2:printf("Volumen je %.2f",volumen(a)); break;
+			case 3:printf("Duljina pr. dijagonale je %.2f",dijagonala(a));
+			break;
+			default:printf("Broj mora biti 1-3");
+		}
+	}
+}

@@ -1,0 +1,42 @@
+#include <stdio.h>
+void upisi (int a[10][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+		{
+			printf("a[%d][%d]: ",i,j);
+			scanf("%d",&a[i][j]);
+		}
+}
+
+void ispisi (int a[10][10],int n)
+{
+	int i,j;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%d\t",a[i][j]);
+		printf("\n"); 
+	}
+}
+
+void glavna(int a[10][10], int n)
+{
+	int i;
+   for(i=0;i<n;i++)
+		printf(" %d",a[i][i]);
+}
+
+void main()
+{
+	int a[10][10],n;
+	printf ("upisite red kvadratne matrice: ");
+	scanf("%d",&n);
+	printf("upisite elemente matrice:\n");
+	upisi(a,n);
+	printf("upisali ste kvadratnu matricu:\n");
+	ispisi (a,n);
+	printf("elementi glavne dijagonale su:\n");
+	glavna(a,n);
+}

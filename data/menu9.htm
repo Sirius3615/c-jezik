@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript"><!--
+function LM_sel(str) {
+var link1,link2;
+link2="z" + str + ".htm";
+parent.glavna.location.href=link2;
+}
+function display(obj1ID, obj2ID) {
+var obj1 = document.getElementById(obj1ID);
+var obj2 = document.getElementById(obj2ID);
+if (obj2.style.display == 'none') {
+	obj2.style.display = 'inline';
+	obj1.style.display = 'none';
+	} else {
+	obj1.style.display = 'inline';
+	obj2.style.display = 'none';
+	}
+}
+function switchImage(imgName, imgSrc) 
+{
+  if (document.images)
+  {
+    if (imgSrc != "none")
+    {
+      document.images[imgName].src = imgSrc;
+    }
+  }
+}
+//--></script>
+</head>
+<body bgcolor="#ECF994">
+<table width="200" border="0">
+  <tr>
+    <td onClick="switchImage('zadaci', '../img/l1_b2.png')"><a href="s9.htm" target="glavna"><img src="../img/xx1_b9_over.png" alt="sazetak" name="l1" width="79" height="22" border="0" onload=""></a></td>
+  </tr>
+  <tr>
+    <td><a href="javascript:;" onMouseOver="display('z1', 'z2')" onMouseOut="display('z1', 'z2')" onClick="LM_sel('9'); switchImage('zadaci', '../img/l1_b2_over.png')"><img id="z1" src="../img/l1_b2.png" alt="zadaci" name="zadaci" border="0" onload=""><img id="z2" style="display:none" src="../img/l1_b2_over.png" border="0"></a></td>
+  </tr>
+</table>
+
+</body>
+</html>

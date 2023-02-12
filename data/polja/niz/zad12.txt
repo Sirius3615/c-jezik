@@ -1,0 +1,34 @@
+#include<stdio.h>
+void main()
+{
+	int n,a[100],i,par=0,nepar=0,par1=0,nepar1=0;
+	printf("Koliko elemenata zelis <100 ");
+	scanf("%d",&n);
+	if (n>100)
+		printf("Unio si prevelik broj");
+	else
+	{
+		printf("Unesi elemente u polje ");
+		for(i=0;i<n;i++)
+		{
+			printf("\na[%d]=",i);
+			scanf("%d",&a[i]);
+		}
+		for(i=0;i<n;i++)
+		{
+			/*zbroj parnih i neparnih brojeva posebno*/
+			if (a[i]>0)
+				if(a[i]%2)
+					nepar+=a[i];
+				else
+					par+=a[i];
+			/*zbroj elemenata na parnim i neparnim mjestima odvojeno*/
+			if (i%2)
+				par1+=a[i];
+			else
+				nepar1+=a[i];
+		}
+		printf("\nZbroj parnih je %d, a neparnih %d",par,nepar);
+		printf("\nNa parnim mjestima zbroj je %d, a na neparnim %d",par1,nepar1);
+	}
+}

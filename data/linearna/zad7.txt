@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	float x1,y1,x2,y2,a,b,o,p;
+	printf("Unesi koordinate donjeg lijevog kuta pravokutnika ");
+	scanf("%f,%f",&x1,&y1);
+	printf("Unesi koodinate gornjeg desnog kuta pravokutnika ");
+	scanf("%f,%f",&x2,&y2);
+	a=x2-x1;
+	b=y2-y1;
+	p=a*b;
+	o=2*a+2*b;
+	printf("Opseg je %.2f, a povrsina je %.2f",o,p);
+}

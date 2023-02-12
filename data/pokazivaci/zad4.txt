@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+	char rec[80],*pok;
+	printf("Unesi jednu recenicu ");
+	pok=gets(rec);
+	do
+	{
+		while(*pok==' '&& *pok)
+			++pok;
+		while(*pok!=' '&&*pok)
+			printf("%c",*pok++);
+		printf("\n");
+	}while(*pok);
+}

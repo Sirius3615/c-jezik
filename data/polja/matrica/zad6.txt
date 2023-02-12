@@ -1,0 +1,37 @@
+#include <stdio.h>
+void upisi (int m[5][3])
+{
+	int i,j;
+	for(i=0;i<5;i++)
+		for(j=0;j<3;j++)
+		{
+			scanf("%d",&m[i][j]);
+		}
+}
+
+void ispisi (int m[5][3])
+{
+	int i,j;
+	for(i=0;i<5;i++)
+	{
+		for(j=0;j<3;j++)
+			printf("%d\t",m[i][j]);
+		printf("\n");
+	}
+}
+
+void main()
+{
+	int a[5][3],b[5][3],i,j,x;
+	printf("upisite elemente prve matrice:\n");
+	upisi (a);
+	printf("upisite jedan cijeli broj x ");
+	scanf("%d",&x);
+	for(i=0;i<5;i++)
+		for(j=0;j<3;j++)
+			b[i][j]=x*a[i][j];
+	printf("\n uèitana matrica je  \n");
+	ispisi(a);
+	printf("\n umnozak matrice i broja %d je\n",x);
+	ispisi(b);
+}

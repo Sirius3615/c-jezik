@@ -1,0 +1,11 @@
+#include <stdio.h>
+void main()
+{
+	float a,b,p,o;
+	printf("\n upisite dva broja: ");
+	scanf("%f,%f", &a, &b);
+	o=2*(a+b);
+	p=a*b;
+	printf("\n p = %.2f",p);
+	printf("\no = %2f",o);
+}

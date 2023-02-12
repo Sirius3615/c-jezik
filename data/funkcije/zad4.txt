@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<math.h>
+#define pi 3.14
+/*funkcija koja provjerava je li ucitani trokut pravokutan*/
+int provjera(float x, float y, float z)
+{
+	int p=0;
+	if (pow(x,2)+pow(y,2)==pow(z,2)) p=1;
+	return p;
+}
+/*funkcija koja racuna obujam stozca*/
+float obujam(float r, float v)
+{
+	float o;
+	o=(pow(r,2)*pi*v)/3;
+	return o;
+}
+float pitagora(float z, float y)
+{
+	float x;
+	x=sqrt(pow(z,2)-pow(y,2));
+	return x;
+}
+/*manji od dva broja*/
+float manji (float x, float y)
+{
+	float z;
+	if (x<y)z=x;
+	else z=y;
+	return z;
+}
+void main()
+{
+	float a,b,c,p,o1,o2,o3,o4,vc,min;
+	int k=0;
+	do
+	{
+		printf("Upisite duljine kateta pravokutnog trokuta: ");
+		scanf("%f, %f", &a, &b);
+		printf("Upisite duljinu hipotenuze: ");
+		scanf("%f", &c);
+		k=provjera(a,b,c);
+	}while (k==0);
+	p=a*b/2;
+	vc=(2*p)/c;
+	o1=obujam(a,b);
+	o2=obujam(b,a);
+	o3=obujam(vc,pitagora(a,vc));
+	o4=obujam(vc,pitagora(b,vc));
+	min=o1;
+	min=manji(min,o2);
+	min=manji(min,o3);
+	min=manji(min,o4);
+	printf("\nNajmanji obujam je %.3f", min);
+}

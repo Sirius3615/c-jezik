@@ -1,0 +1,63 @@
+#include<stdio.h>
+void upisi(int x[30],int z)
+{
+	int i;
+	for(i=0;i<z;i++)
+	{
+		printf("%d: ",i+1);
+		scanf("%d",&x[i]);
+	}
+}
+/*funkcija za sortiranje elemenata niza buuble sort metodom*/
+void bubble (int x[60],int z)
+{
+	int pom,i=1,j,k;
+		do
+		{
+			k=0;
+			for (j=0;j<(z-i);j++)
+				if (x[j]<x[j+1])
+				{
+						pom=x[j];
+						x[j]=x[j+1];
+						x[j+1]=pom;
+						k=1;
+				}
+			i++;
+		}while (k>0);
+}
+void ispisi (int x[60],int z)
+{
+	int i;
+	printf("\n");
+	for (i=0;i<z;i++)
+		printf("%d ",x[i]);
+}
+
+void main()
+{
+	int a[30],b[30],c[60],i,n,m;
+	printf("Upisite broj elemenata u prvom polju: ");
+	scanf("%d",&n);
+	printf("Upisite broj elemenata u drugom polju: ");
+	scanf("%d",&m);
+	if (n<=30)
+	{
+		/*ucitavanje elemenata 1. niza*/
+		printf("Upisite elemente prvog niza: \n");
+		upisi(a,n);
+		/*ucitavanje elemenata 2. niza*/
+		printf("Upisite elemente drugog niza: \n");
+		upisi(b,m);
+		bubble(a,n);
+		bubble(b,m);
+		/*formiranje treceg niza*/
+		for (i=0;i<n+m;i++)
+			if (i<n)
+				c[i]=a[i];
+			else
+				c[i]=b[i-n];
+		bubble(c,n+m);
+		ispisi(c,n+m);
+	}
+}

@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	char prezime[20], ime[15], adresa[15];
+	FILE *f;
+	int i,n;
+
+	f=fopen("razred.dat","w+");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+  printf ("Koliko imate ucenika: ");
+  scanf ("%d", &n);
+
+	/*pisanje u datoteku*/
+	for(i=0;i<n;i++)
+	{
+		printf ("Upisite podatke za %d ucenika\n", i+1);
+		printf("Prezime: ");
+		scanf("%s",prezime);
+		printf("Ime: ");
+		scanf("%s",ime);
+		printf("Adresa: ");
+		scanf("%s",adresa);
+		fprintf(f,"%s %s %s", prezime, ime, adresa);
+	 }
+		fclose(f);
+}

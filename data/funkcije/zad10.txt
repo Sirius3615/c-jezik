@@ -1,0 +1,32 @@
+#include <stdio.h>
+/*rekurzivna funkcija za racunanje potencije+/
+long int potencija(int b,int e)
+{
+	if (e==0)
+			return 1;
+	else
+			return b*potencija(b,e-1);
+}
+/*rekurzivna funkcija za racunanje faktorijela*/
+long int faktorijel(int n)
+{
+	if (n==1)
+			return 1;
+	else
+			return faktorijel(n-1)*n;
+}
+void main(void)
+{
+	int x,i,y;
+	float s;
+	printf("Upisite prirodan broj x i n ");
+	scanf("%d,%d",&x,&y);
+	if (y<=0)
+			printf("Broj mora biti prirodan");
+	else
+	{
+			for (i=1;i<=y;i++)
+				s+=(float)potencija(x,i)/faktorijel(i);
+			printf("Zbroj je %.2f ",s);
+	}
+}

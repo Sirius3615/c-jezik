@@ -1,0 +1,16 @@
+#include<stdio.h>
+main()
+{
+	float gradska, negradska, M, x;
+	int zapremina;
+	printf("Zapremina spremnika u litrama: ");
+	scanf("%d", &zapremina);
+	printf("Prosjecna potrosnja goriva u gradu: ");
+	scanf("%f",&gradska);
+	printf("Prosjecna potrosnja goriva izvan grada: ");
+	scanf("%f",&negradska);
+	printf("Predjeni kilometri u gradu: ");
+	scanf("%f", &M);
+	x=(100*zapremina-M*gradska)/negradska;
+	printf("Izvan grada mozete prijeci jos %.2f km",x);
+}

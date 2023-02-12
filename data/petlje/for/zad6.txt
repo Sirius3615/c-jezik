@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main()
+{
+	int i,s=0,br=0;
+	for(i=500;i<=600;i++)
+		if (i%11==0)
+		{
+			s+=i;
+			br++;
+		}
+	printf("Zbroj je %d, a ima ih %d",s,br);
+}

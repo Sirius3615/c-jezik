@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	struct podaci
+	{
+		char ime[4];
+		int broj;
+	 } razred;
+	FILE *f;
+	int i,n,iz=0;
+
+	f=fopen("odlikasi.dat","w+");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+  printf ("Koliko imate razreda: ");
+  scanf ("%d", &n);
+
+	/*pisanje u datoteku*/
+  for(i=1;i<=n;i++)
+	{
+		printf ("\nUpisite podatke za %d razred\n", i);
+		printf("Razred: ");
+		scanf("%s",razred.ime);
+		printf("Broj odlicnih ucenika: ");
+		scanf("%d",&razred.broj);
+		fwrite(&razred,sizeof(struct podaci),1,f);
+	 }
+		fclose(f);
+
+	f=fopen("odlikasi.dat","r");
+	if(f==NULL)
+	{
+		printf("Greska pri otvaranju");
+		exit(1);
+	}
+	for (i=1;i<=n;i++)
+	{
+	fread(&razred,sizeof(struct podaci),1,f);
+		iz+=razred.broj;
+	}
+	fclose(f);
+	printf("Ukupan broj odlikasa je %d",iz);
+}

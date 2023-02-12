@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+struct tocka
+{
+	float x;
+	float y;
+}T,O;
+void main()
+{
+	float d;
+	O.x=0;
+	O.y=0;
+	printf("\nUpisite koordinate tocke T ");
+	scanf("%f,%f",&T.x,&T.y);
+	d=sqrt(pow(T.x,2)+pow(T.y,2));
+	printf("\nUdaljenost tocke T(%.2f,%.2f) od ishodista je %.2f", T.x,T.y,d);
+}

@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<math.h>
+float a,b,m;
+void main(void)
+{
+	printf("\nUpisi jedan kompleksni broj:");
+	scanf("%f,%f",&a,&b);
+	m=sqrt(a*a+b*b);
+	printf("Modul upisanog kompleksnog broja %.2f+%.2fi je %.2f ",a,b,m);
+}

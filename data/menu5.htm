@@ -1,0 +1,45 @@
+<head>
+<script language="JavaScript"><!--
+function LM_sel(str) {
+var link1,link2;
+link2="s" + str + ".htm";
+parent.glavna.location.href=link2;
+}
+function Z_sel(br) {
+var link1,link2;
+link2="z" + br + ".htm";
+parent.glavna.location.href=link2;
+}
+function display(obj1ID, obj2ID, obj3ID) {
+var obj1 = document.getElementById(obj1ID);
+var obj2 = document.getElementById(obj2ID);
+var obj3 = document.getElementById(obj3ID);
+if (obj3.style.display == 'none') {
+	obj2.style.display = 'inline';
+	obj3.style.display = 'inline';
+	obj1.style.display = 'none';
+	} else {
+	obj1.style.display = 'inline';
+	obj2.style.display = 'none';
+	obj3.style.display = 'none';
+	}
+}
+//--></script>
+</head>
+<body bgcolor="#ECF994">
+<table width="229" border="0">
+  <tr>
+    <td><img src="../img/xx1_b5_over.png" width="134" height="22"></td>
+  </tr>
+  <tr>
+    <td onMouseOver="display('f1', 'f2', 'f3')" onMouseOut="display('f1', 'f2', 'f3')"><a href="javascript:;" onClick="LM_sel('5_1')"><img id="f1" src="../img/l1_b10.png" alt="for" name="l1" width="74" height="24" border="0" onload=""><img id="f2" style="display:none" src="../img/l1_b10_over.png" alt="for" name="l2" width="74" height="24" border="0" onload=""></a><a href="javascript:;" onClick="Z_sel('5_1')"><img id="f3" style="display:none" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+  </tr>
+  <tr>
+    <td onMouseOver="display('w1', 'w2', 'w3')" onMouseOut="display('w1', 'w2', 'w3')"><a href="javascript:;" onClick="LM_sel('5_2')"><img id="w1" src="../img/l1_b11.png" alt="while" name="l2" width="74" height="24" border="0" onload=""><img id="w2" style="display:none" src="../img/l1_b11_over.png" alt="for" name="l2" width="74" height="24" border="0" onload=""></a><a href="javascript:;" onClick="Z_sel('5_2')"><img id="w3" style="display:none" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+	</tr>
+	<tr>
+	<td onMouseOver="display('d1', 'd2', 'd3')" onMouseOut="display('d1', 'd2', 'd3')"><a href="javascript:;" onClick="LM_sel('5_3')"><img id="d1" src="../img/l1_b12.png" alt="do" name="l3" width="74" height="24" border="0" onload=""><img id="d2" style="display:none" src="../img/l1_b12_over.png" alt="for" name="l2" width="74" height="24" border="0" onload=""></a><a href="javascript:;" onClick="Z_sel('5_3')"><img id="d3" style="display:none" src="../img/l1_b2.png" width="74" height="24" border="0"></a></td>
+	</tr>
+</table>
+
+</body>

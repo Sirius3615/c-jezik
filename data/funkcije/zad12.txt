@@ -1,0 +1,19 @@
+#include <stdio.h>
+long int fibonacci(int a)
+{
+	if (a==1 || a==2)
+			return 1;
+	else
+			return fibonacci(a-2)+fibonacci(a-1);
+}
+void main()
+{
+	int n,i;
+	printf("\nUpisite jedan prirodan broj ");
+	scanf("%d",&n);
+	if (n<1)
+			printf("\Broj mora biti >0");
+	else
+			for (i=1;i<=n;i++)
+				printf("\nf(%d)=%ld",i,fibonacci(i));
+}

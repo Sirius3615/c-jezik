@@ -1,0 +1,17 @@
+#include<stdio.h>
+void zamjena(int *a,int *b)
+{
+	int t;
+	t=*a;
+	*a=*b;
+	*b=t;
+}
+void main()
+{
+	int a,b;
+	printf("\nUnesite dva cijela broja ");
+	scanf("%d,%d",&a,&b);
+	printf("\nVrijednosti prije zamjene su \na=%d\tb=%d",a,b);
+	zamjena(&a,&b);
+	printf("\nVrijednosti nakon zamjene su \na=%d\tb=%d",a,b);
+}

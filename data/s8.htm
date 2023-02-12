@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-2">
+<title>linearna</title>
+</head>
+<body bgcolor="#ECF994">
+<font size="2" face="Arial, Helvetica, sans-serif"> &gt; Datoteke omogućavaju 
+pohranjivanje velike količine podataka koji se mogu rabiti neovisno o izvođenju 
+programa.<br>
+&gt; Mogu biti tekstualne ili binarne.<br>
+&gt; Najavljuju se sa <br>
+<font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;FILE 
+*identifikator;</strong></font><br>
+&gt; Prije upotrebe datoteka se mora otvoriti funkcijom <font face="Courier New, Courier, mono"><strong>fopen()</strong></font>, 
+a nakon uporabe zatvoriti funkcijom <font face="Courier New, Courier, mono"><strong>fclose();</strong></font>.<br>
+<font face="Courier New, Courier, mono">&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp;&nbsp;fopen(&quot;ime_datoteke&quot;,&quot;nacin_otvaranja&quot;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fclose(identifikator);</strong></font><br>
+&gt; Načini otvaranja datoteke su:<br><br>
+</font> 
+<table border="1">
+  <tr> 
+    <td><div align="center"><strong><font size="2" face="Arial, Helvetica, sans-serif">Način 
+        otvaranja</font></strong></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif"><b>Objašnjenje</b></font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;r&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara tekstualnu datoteku 
+      za čitanje. Ako datoteka ne postoji javlja pogrešku.</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;w&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara tekstualnu datoteku 
+      za pisanje u nju. </font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;a&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara tekstualnu datoteku 
+      za dodavanje novih podataka na njen kraj. </font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;r+&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara tekstualnu datoteku 
+      za čitanje i pisanje. Ako ne postoji javlja pogrešku.</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;w+&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara tekstualnu datoteku 
+      za čitanje i pisanje. Ako datoteka ne postoji kreirat će ju. Ako datoteka 
+      postoji, svi podaci iz nje bit će izbrisani prije upisivanja novih.</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;a+&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara tekstualnu datoteku 
+      za dodavanje novih podataka na njen kraj. Ako datoteka ne postoji bit će 
+      kreirana</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;rb&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara binarnu datoteku 
+      za čitanje</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;wb&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara binarnu datoteku 
+      za pisanje u nju.</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;ab&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara binarnu datoteku 
+      za dodavanje novih podataka na njezin kraj.</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;r+b&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara binarnu datoteku 
+      za čitanje i pisanje. Ako ne postoji javlja pogrešku.</font></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><font face="Courier New, Courier, mono"><strong><font size="2">&quot;w+b&quot;</font></strong></font></div></td>
+    <td><font size="2" face="Arial, Helvetica, sans-serif">Otvara datoteku za 
+      čitanje i pisanje. Ako datoteka ne postoji bit će kreirana.</font></td>
+  </tr>
+</table>
+<font size="2" face="Arial, Helvetica, sans-serif"><br>
+&gt; Za pisanje u datoteku koristi se nekoliko funkcija. Najčešće korištene funkcije 
+su <font face="Courier New, Courier, mono"><strong>fprintf()</strong></font> - 
+funkcija za formatirani upis i <font face="Courier New, Courier, mono"><strong>fwrite()</strong></font> 
+- funkcija za upisivanje blokova podataka.<br>
+&gt; Za čitanje podataka iz datoteke najčešće se koriste funkcije <font face="Courier New, Courier, mono"><strong>fscanf()</strong></font> 
+i <font face="Courier New, Courier, mono"><strong>fread()</strong></font>.<br>
+&gt; Često se upotrebljavaju u kombinacijama sa strukturama. </font> 
+</body>
+</html>
